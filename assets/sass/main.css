@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+body {
+  background-color: #F7F7F7;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("../font/Montserrat-VariableFont_wght.ttf");
@@ -134,6 +138,64 @@ header .container-menus .menu-menu-secondaire-container ul .menu-item-25 a:befor
 }
 header .container-menus .menu-menu-secondaire-container ul .menu-item-26 a:before {
   background-image: url("../icons/logo-instagram.svg");
+}
+
+.section-header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 80vh;
+}
+
+.section-header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.section-header .elementor-container {
+  max-width: 100% !important;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap {
+  padding: 0px;
+  position: relative;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .img-header .elementor-widget-container {
+  background-image: url("../img/form-home.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  width: 100%;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .img-header .elementor-widget-container img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 80vh;
+  position: relative;
+  z-index: -1;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .section-inner-content {
+  position: absolute;
+  background-color: rgba(0, 97, 133, 0.8);
+  width: 70%;
+  max-width: 1200px;
+  padding: 30px;
+  border-radius: 52px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .section-inner-content .title-header {
+  font-weight: bold;
+  color: #FFFF;
+  font-size: 40px;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .section-inner-content .txt-header {
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFF;
 }
 
 /*# sourceMappingURL=main.css.map */

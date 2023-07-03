@@ -1,0 +1,49 @@
+@import "../../../../aquaplaisir/assets/sass/utils/mixins"
+@import "../../../../aquaplaisir/assets/sass/utils/variables"
+
+.section-header
+  @include BgCenterCover
+  background-position: bottom
+  height: 80vh
+
+.section-header
+  @include BgCenterCover
+  background-position: bottom
+  .elementor-container
+    max-width: 100%!important
+    .col-header
+      .elementor-widget-wrap
+        padding: 0px
+        position: relative
+        .img-header
+          .elementor-widget-container
+            background-image: url("../img/form-home.svg")
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: bottom
+            width: 100%
+            img
+              width: 100%
+              object-fit: cover
+              max-height: 80vh
+              position: relative
+              z-index: -1
+        .section-inner-content
+          position: absolute
+          background-color: $cThird80
+          width: 70%
+          max-width: 1200px
+          padding: 30px
+          border-radius: 52px
+          @include AbsoluteCenter
+          .title-header
+            font-weight: bold
+            color: $cWhite
+            font-size: 40px
+          .txt-header
+            font-size: 20px
+            font-weight: 300
+            color: $cWhite
+
+
+
