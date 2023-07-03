@@ -1,0 +1,97 @@
+@import "../../../../aquaplaisir/assets/sass/utils/mixins"
+@import "../../../../aquaplaisir/assets/sass/utils/variables"
+
+header
+  height: 150px
+  display: flex
+  justify-content: space-between
+  padding-left: 30px
+  box-shadow: 0 1px 35px rgba(40,66,158,0.24)
+  .logo-header-desktop
+    @include FlexVerticalCenter
+  .container-menus
+    display: flex
+    .menu-menu-principal-container
+      text-transform: uppercase
+      font-weight: 500
+      font-size: 20px
+      @include FlexVerticalCenter
+      ul
+        display: flex
+        height: 100%
+        .menu-item
+          padding: 0 50px
+          @include FlexCenter
+          &:hover
+            background-color: $cPrinc
+            transition: $DurationTransition
+            a
+              color: $cWhite
+              height: 100%
+          a
+            color: $cPrinc
+            @include FlexVerticalCenter
+            &:before
+              content: ''
+              display: inline-block
+              height: 50px
+              width: 55px
+              margin-right: 25px
+              @include BgCenterContain
+        .menu-item-19
+          a:before
+            background-image: url("../icons/icon-piscines.svg")
+        .menu-item-19:hover
+          a:before
+            background-image: url("../icons/icon-piscine-white.svg")
+        .menu-item-18
+          a:before
+            background-image: url("../icons/icon-spas.svg")
+        .menu-item-18:hover
+          a:before
+            background-image: url("../icons/icon-spa-white.svg")
+        .menu-item-17
+          a:before
+            height: 45px
+            background-image: url("../icons/icon-robot-piscine.svg")
+        .menu-item-17:hover
+          a:before
+            background-image: url("../icons/icon-robot-piscine-white.svg")
+    .menu-menu-secondaire-container
+      background-color: $cPrinc
+      box-shadow: inset 15px 0 25px rgba(0,0,0,0.15)
+      ul
+        display: flex
+        width: 200px
+        height: 150px
+        flex-wrap: wrap
+        li
+          width: 50%
+          height: 50%
+          position: relative
+          a
+            font-size: 0px
+            @include AbsoluteCover
+            @include FlexCenter
+            &:before
+              content: ''
+              display: inline-block
+              position: absolute
+              @include BgCenterContain
+              width: 50%
+              height: 50%
+            &:hover
+              background-color: $cSecond
+              transition: $DurationTransition
+        .menu-item-23
+          a:before
+            background-image: url("../icons/logo-contact-telephone-mail.svg")
+        .menu-item-24
+          a:before
+            background-image: url("../icons/logo-adresse.svg")
+        .menu-item-25
+          a:before
+            background-image: url("../icons/logo-facebook.svg")
+        .menu-item-26
+          a:before
+            background-image: url("../icons/logo-instagram.svg")

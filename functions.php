@@ -17,3 +17,5 @@ function theme_AquaPlaisir_register_assets(){
 add_action('wp_enqueue_scripts', 'theme_AquaPlaisir_register_assets');
 add_filter("use_block_editor_for_post_type", "disable_gutenberg_editor");
 add_action('after_setup_theme','theme_AquaPlaisir_supports');
+register_nav_menu('header', 'menu principal');
+register_nav_menu('header-secondary', 'menu secondaire');

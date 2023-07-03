@@ -1,3 +1,139 @@
+* {
+  font-family: Montserrat;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-VariableFont_wght.ttf");
+}
+header {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  box-shadow: 0 1px 35px rgba(40, 66, 158, 0.24);
+}
+header .logo-header-desktop {
+  display: flex;
+  align-items: center;
+}
+header .container-menus {
+  display: flex;
+}
+header .container-menus .menu-menu-principal-container {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+header .container-menus .menu-menu-principal-container ul {
+  display: flex;
+  height: 100%;
+}
+header .container-menus .menu-menu-principal-container ul .menu-item {
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container-menus .menu-menu-principal-container ul .menu-item:hover {
+  background-color: #28429E;
+  transition: 0.3s;
+}
+header .container-menus .menu-menu-principal-container ul .menu-item:hover a {
+  color: #FFFF;
+  height: 100%;
+}
+header .container-menus .menu-menu-principal-container ul .menu-item a {
+  color: #28429E;
+  display: flex;
+  align-items: center;
+}
+header .container-menus .menu-menu-principal-container ul .menu-item a:before {
+  content: "";
+  display: inline-block;
+  height: 50px;
+  width: 55px;
+  margin-right: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+header .container-menus .menu-menu-principal-container ul .menu-item-19 a:before {
+  background-image: url("../icons/icon-piscines.svg");
+}
+header .container-menus .menu-menu-principal-container ul .menu-item-19:hover a:before {
+  background-image: url("../icons/icon-piscine-white.svg");
+}
+header .container-menus .menu-menu-principal-container ul .menu-item-18 a:before {
+  background-image: url("../icons/icon-spas.svg");
+}
+header .container-menus .menu-menu-principal-container ul .menu-item-18:hover a:before {
+  background-image: url("../icons/icon-spa-white.svg");
+}
+header .container-menus .menu-menu-principal-container ul .menu-item-17 a:before {
+  height: 45px;
+  background-image: url("../icons/icon-robot-piscine.svg");
+}
+header .container-menus .menu-menu-principal-container ul .menu-item-17:hover a:before {
+  background-image: url("../icons/icon-robot-piscine-white.svg");
+}
+header .container-menus .menu-menu-secondaire-container {
+  background-color: #28429E;
+  box-shadow: inset 15px 0 25px rgba(0, 0, 0, 0.15);
+}
+header .container-menus .menu-menu-secondaire-container ul {
+  display: flex;
+  width: 200px;
+  height: 150px;
+  flex-wrap: wrap;
+}
+header .container-menus .menu-menu-secondaire-container ul li {
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+header .container-menus .menu-menu-secondaire-container ul li a {
+  font-size: 0px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container-menus .menu-menu-secondaire-container ul li a:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 50%;
+}
+header .container-menus .menu-menu-secondaire-container ul li a:hover {
+  background-color: #00AEEF;
+  transition: 0.3s;
+}
+header .container-menus .menu-menu-secondaire-container ul .menu-item-23 a:before {
+  background-image: url("../icons/logo-contact-telephone-mail.svg");
+}
+header .container-menus .menu-menu-secondaire-container ul .menu-item-24 a:before {
+  background-image: url("../icons/logo-adresse.svg");
+}
+header .container-menus .menu-menu-secondaire-container ul .menu-item-25 a:before {
+  background-image: url("../icons/logo-facebook.svg");
+}
+header .container-menus .menu-menu-secondaire-container ul .menu-item-26 a:before {
+  background-image: url("../icons/logo-instagram.svg");
+}
 
 /*# sourceMappingURL=main.css.map */
