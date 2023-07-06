@@ -10,13 +10,60 @@ body {
   background-color: #F7F7F7;
 }
 
+.p {
+  letter-spacing: 0.5px;
+  line-height: 35px;
+  font-size: 18px;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("../font/Montserrat-VariableFont_wght.ttf");
 }
+.btn-content-info a {
+  background-color: #00AEEF !important;
+  width: 150px;
+  font-weight: bold !important;
+  line-height: 45px;
+  padding: 0;
+  margin-right: 15px;
+}
+.btn-content-info a:hover {
+  transform: 0.3s;
+  opacity: 0.8;
+}
+
+.btn-card-h {
+  background-color: #FFFF;
+  width: 150px !important;
+  border-radius: 6px;
+  margin: 0px auto 0 auto;
+}
+.btn-card-h a {
+  color: #006185;
+  font-size: 15px;
+  font-weight: bold !important;
+}
+
+.title-content-info {
+  font-weight: 600;
+  font-size: 30px;
+  color: #28429E;
+}
+
+.title-swip {
+  font-weight: 600;
+  font-size: 50px;
+  color: #28429E;
+}
+
 header {
+  position: fixed;
+  z-index: 999;
+  background-color: #FFFF;
   height: 150px;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   padding-left: 30px;
   box-shadow: 0 1px 35px rgba(40, 66, 158, 0.24);
@@ -178,24 +225,325 @@ header .container-menus .menu-menu-secondaire-container ul .menu-item-26 a:befor
 .section-header .elementor-container .col-header .elementor-widget-wrap .section-inner-content {
   position: absolute;
   background-color: rgba(0, 97, 133, 0.8);
-  width: 70%;
+  width: 50%;
   max-width: 1200px;
   padding: 30px;
   border-radius: 52px;
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .section-header .elementor-container .col-header .elementor-widget-wrap .section-inner-content .title-header {
   font-weight: bold;
   color: #FFFF;
-  font-size: 40px;
+  font-size: 35px;
 }
 .section-header .elementor-container .col-header .elementor-widget-wrap .section-inner-content .txt-header {
   font-size: 20px;
   font-weight: 300;
   color: #FFFF;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .btn-rdv-header {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  background-color: #28429E;
+  border-radius: 8px;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .btn-rdv-header a {
+  padding: 0;
+  line-height: 75px;
+  width: 320px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .btn-rdv-header:hover {
+  transition: 0.5s;
+  padding-right: 20px;
+  display: flex;
+  font-weight: bold;
+}
+.section-header .elementor-container .col-header .elementor-widget-wrap .btn-rdv-header:hover:after {
+  content: "";
+  display: inline-block;
+  transform: translateX(-7px);
+  width: 50px;
+  height: 75px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../icons/arrow-right.svg");
+}
+
+.section-card-home {
+  padding: 110px 0;
+}
+.section-card-home .elementor-container {
+  max-width: 1500px !important;
+  justify-content: center;
+}
+.section-card-home .elementor-container .col-card-home {
+  padding: 50px 20px;
+  border-radius: 52px;
+  text-align: center;
+  color: #FFFF;
+  position: relative;
+  width: 45%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.29);
+}
+.section-card-home .elementor-container .col-card-home:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 52px;
+  background-color: rgba(0, 97, 133, 0.57);
+}
+.section-card-home .elementor-container .col-card-home .elementor-widget-wrap {
+  z-index: 99;
+  flex-direction: column;
+  height: 250px;
+}
+.section-card-home .elementor-container .col-card-home .elementor-widget-wrap .title-card-h {
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.section-card-home .elementor-container .col-card-home .elementor-widget-wrap .txt-card-h {
+  margin: auto;
+  max-width: 80%;
+  font-weight: 600;
+}
+.section-card-home .elementor-container .col-card-home:first-of-type {
+  background-image: url("../img/bg-card-piscines-coque.jpg");
+  margin-right: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-card-home .elementor-container .col-card-home:nth-of-type(2) {
+  background-image: url("../img/bg-card-spas-vendome.jpeg");
+  margin-left: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-title {
+  padding: 0px 0 60px 0;
+}
+.section-title .elementor-container {
+  max-width: 1500px !important;
+}
+.section-title .elementor-container .col-title .title {
+  color: #00AEEF;
+  font-size: 40px;
+  font-weight: 300;
+}
+.section-title .elementor-container .col-title .title h2 {
+  line-height: 70px;
+}
+.section-title .elementor-container .col-title .title h2 span {
+  font-weight: 600;
+}
+
+.section-info-aq {
+  padding-bottom: 150px;
+}
+.section-info-aq .elementor-container {
+  max-width: 100% !important;
+}
+.section-info-aq .elementor-container .col-img-info {
+  width: 50vw;
+}
+.section-info-aq .elementor-container .col-img-info .elementor-widget-wrap {
+  padding: 0px;
+}
+.section-info-aq .elementor-container .col-img-info .elementor-widget-wrap .img-info {
+  z-index: 98;
+}
+.section-info-aq .elementor-container .col-img-info .elementor-widget-wrap .img-info .elementor-widget-container {
+  text-align: left;
+}
+.section-info-aq .elementor-container .col-img-info .elementor-widget-wrap .img-info .elementor-widget-container img {
+  width: 100%;
+  border-radius: 0 52px 52px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.29);
+}
+.section-info-aq .elementor-container:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  background-color: #28429E;
+  width: 350px;
+  height: 350px;
+  transform: translateY(70px);
+  border-radius: 0 0 52px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.29);
+}
+.section-info-aq .elementor-container .col-left {
+  left: 0 !important;
+}
+.section-info-aq .elementor-container .col-content-info {
+  position: absolute;
+  right: 0;
+  width: 60vw;
+  z-index: 99;
+  top: 10%;
+  background-color: #FFFF;
+  height: 360px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.16);
+  padding: 50px;
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap {
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap .txt-content-info {
+  color: #3c4452;
+  max-width: 70%;
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap .elementor-inner-section .elementor-container:after {
+  display: none;
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap .elementor-inner-section .elementor-container .elementor-inner-column {
+  width: auto;
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap .elementor-inner-section .elementor-container .elementor-inner-column .elementor-widget-wrap {
+  padding: 0;
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap .elementor-inner-section .elementor-container .elementor-inner-column .elementor-widget-wrap .btn-content-devis a {
+  text-transform: uppercase;
+  padding: 0;
+  width: 250px;
+  line-height: 41px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  color: #28429E;
+  border: solid 2px #28429E;
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap .elementor-inner-section .elementor-container .elementor-inner-column .elementor-widget-wrap .btn-content-devis a:before {
+  content: "";
+  background-image: url("../icons/icon-devis.svg");
+  height: 41px;
+  width: 30px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateX(-15px);
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap .elementor-inner-section .elementor-container .elementor-inner-column .elementor-widget-wrap .btn-content-devis a:hover {
+  background-color: #28429E;
+  color: #FFFF;
+}
+.section-info-aq .elementor-container .col-content-info .elementor-widget-wrap .elementor-inner-section .elementor-container .elementor-inner-column .elementor-widget-wrap .btn-content-devis a:hover:before {
+  transition: 0.3s;
+  background-image: url("../icons/icon-devis-white.svg");
+}
+
+.section-right .elementor-container {
+  flex-direction: row-reverse;
+}
+.section-right .elementor-container .col-img-info > .elementor-widget-wrap > .img-info > .elementor-widget-container img {
+  border-radius: 52px 0 0 52px;
+}
+.section-right .elementor-container .col-content-info {
+  height: 550px;
+}
+.section-right .elementor-container .col-content-info .elementor-inner-section .elementor-container {
+  flex-direction: revert;
+}
+.section-right .elementor-container .col-content-info .elementor-inner-section .elementor-container .btn-content-info a {
+  width: 200px !important;
+}
+.section-right .elementor-container:after {
+  right: 0;
+  border-radius: 0 0 0 52px;
+}
+
+.section-spas-info {
+  padding-bottom: 60px;
+}
+.section-spas-info .elementor-container {
+  max-width: 90vw !important;
+  position: unset !important;
+}
+.section-spas-info .elementor-container .col-img-spas .img-spas {
+  text-align: left;
+}
+.section-spas-info .elementor-container .col-img-spas .img-spas img {
+  width: 80%;
+}
+.section-spas-info .elementor-container .col-info-spas {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  background-color: #FFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.16);
+  padding: 50px 0 50px 50px;
+}
+.section-spas-info .elementor-container .col-info-spas .elementor-widget-wrap {
+  max-width: 1000px;
+  text-align: center;
+}
+.section-spas-info .elementor-container .col-info-spas .elementor-widget-wrap .txt-spas {
+  text-align: left;
+  color: #3c4452;
+}
+.section-skills {
+  background-image: url("../img/illustration-projet-piscine.png");
+  display: flex;
+  align-items: center;
+  height: 450px;
+  color: #FFFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-skills .elementor-container {
+  width: 50%;
+}
+.section-skills .elementor-container .col-nb-project, .section-skills .elementor-container .col-nb-year {
+  text-align: center;
+}
+.section-skills .elementor-container .col-nb-project .nb-project, .section-skills .elementor-container .col-nb-project .nb-year, .section-skills .elementor-container .col-nb-year .nb-project, .section-skills .elementor-container .col-nb-year .nb-year {
+  font-size: 60px;
+  font-weight: 600;
+}
+.section-skills .elementor-container .col-nb-project .txt-nb-project, .section-skills .elementor-container .col-nb-project .txt-nb-year, .section-skills .elementor-container .col-nb-year .txt-nb-project, .section-skills .elementor-container .col-nb-year .txt-nb-year {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.section-title-swip {
+  padding: 60px 0;
+}
+.section-title-swip .elementor-container {
+  max-width: 1500px !important;
+}
+
+.swiper {
+  display: block;
+  width: 60vw !important;
+  margin-bottom: 150px;
+}
+.swiper .swiper-slide {
+  height: 500px;
+  margin-right: 15px !important;
+}
+.swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,215 @@
+@import "../../../../aquaplaisir/assets/sass/utils/mixins"
+@import "../../../../aquaplaisir/assets/sass/utils/variables"
+
+.section-card-home
+  @include SpaceSection
+  .elementor-container
+    @include WidthContainer
+    justify-content: center
+    .col-card-home
+      padding: 50px 20px
+      border-radius: $BorderRadius
+      text-align: center
+      color: $cWhite
+      position: relative
+      width: 45%
+      box-shadow: 0 3px 6px $Shadow
+      &:after
+        content: ''
+        @include AbsoluteCover
+        border-radius: $BorderRadius
+        background-color: $cThird57
+      .elementor-widget-wrap
+        z-index: 99
+        flex-direction: column
+        height: 250px
+        .title-card-h
+          margin-bottom: 0px
+          font-weight: bold
+          font-size: 30px
+          text-transform: uppercase
+        .txt-card-h
+          margin: auto
+          max-width: 80%
+          font-weight: 600
+      &:first-of-type
+        background-image: url("../img/bg-card-piscines-coque.jpg")
+        margin-right: 50px
+        @include BgCenterCover
+      &:nth-of-type(2)
+        background-image: url("../img/bg-card-spas-vendome.jpeg")
+        margin-left: 50px
+        @include BgCenterCover
+
+.section-title
+  padding: 0px 0 60px 0
+  .elementor-container
+    @include WidthContainer
+    .col-title
+      .title
+        color: $cSecond
+        @include TitleH2
+        h2
+          line-height: 70px
+          span
+            font-weight: 600
+
+.section-info-aq
+  padding-bottom: 150px
+  .elementor-container
+    max-width: 100%!important
+    .col-img-info
+      width: 50vw
+      .elementor-widget-wrap
+        padding: 0px
+        .img-info
+          z-index: 98
+          .elementor-widget-container
+            text-align: left
+            img
+              width: 100%
+              border-radius: 0 $BorderRadius $BorderRadius 0
+              box-shadow: 0 3px 6px $Shadow
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      display: block
+      background-color: $cPrinc
+      width: 350px
+      height: 350px
+      transform: translateY(70px)
+      border-radius: 0 0 $BorderRadius 0
+      box-shadow: 0 3px 6px $Shadow
+
+    .col-left
+      left: 0!important
+    .col-content-info
+      position: absolute
+      right: 0
+      width: 60vw
+      z-index: 99
+      top: 10%
+      background-color: $cWhite
+      height: 360px
+      box-shadow: 0 0px 15px $Shadow2
+      padding: 50px
+      .elementor-widget-wrap
+        flex-direction: column
+        justify-content: space-around
+        .txt-content-info
+          color: $cGrayP
+          max-width: 70%
+        .elementor-inner-section
+          .elementor-container
+            &:after
+              display: none
+            .elementor-inner-column
+              width: auto
+              .elementor-widget-wrap
+                padding: 0
+
+                .btn-content-devis
+                  a
+                    text-transform: uppercase
+                    padding: 0
+                    width: 250px
+                    line-height: 41px
+                    font-weight: bold
+                    display: flex
+                    justify-content: center
+                    color: $cPrinc
+                    border: solid 2px $cPrinc
+                    &:before
+                      content: ''
+                      background-image: url("../icons/icon-devis.svg")
+                      height: 41px
+                      width: 30px
+                      display: inline-block
+                      @include BgCenterContain
+                      transform: translateX(-15px)
+                    &:hover
+                      background-color: $cPrinc
+                      color: $cWhite
+                      &:before
+                        transition: $DurationTransition
+                        background-image: url("../icons/icon-devis-white.svg")
+.section-right
+  .elementor-container
+    flex-direction: row-reverse
+    .col-img-info > .elementor-widget-wrap > .img-info > .elementor-widget-container
+      img
+        border-radius: $BorderRadius 0 0 $BorderRadius
+    .col-content-info
+      height: 550px
+      .elementor-inner-section
+        .elementor-container
+          flex-direction: revert
+          .btn-content-info
+            a
+              width: 200px!important
+  .elementor-container:after
+    right: 0
+    border-radius: 0 0 0 $BorderRadius
+
+.section-spas-info
+  padding-bottom: 60px
+  .elementor-container
+    max-width: 90vw!important
+    position: unset!important
+    .col-img-spas
+      .img-spas
+        text-align: left
+        img
+          width: 80%
+    .col-info-spas
+      position: absolute
+      right: 0
+      top: 10%
+      background-color: $cWhite
+      box-shadow: 0 0 15px $Shadow2
+      padding: 50px 0 50px 50px
+      .elementor-widget-wrap
+        max-width: 1000px
+        text-align: center
+        .title-content-info
+        .icon-aq
+        .txt-spas
+          text-align: left
+          color: $cGrayP
+        .btn-spas
+
+.section-skills
+  background-image: url("../img/illustration-projet-piscine.png")
+  @include FlexVerticalCenter
+  height: 450px
+  color: $cWhite
+  @include BgCenterCover
+  .elementor-container
+    width: 50%
+    .col-nb-project, .col-nb-year
+      text-align: center
+      .nb-project, .nb-year
+        font-size: 60px
+        font-weight: 600
+      .txt-nb-project, .txt-nb-year
+        font-size: 35px
+        font-weight: 600
+
+.section-title-swip
+  padding: 60px 0
+  .elementor-container
+    @include WidthContainer
+
+.swiper
+  display: block
+  width: 60vw!important
+  margin-bottom: 150px
+  .swiper-slide
+    height: 500px
+
+    margin-right: 15px!important
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
