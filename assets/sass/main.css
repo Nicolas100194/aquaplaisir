@@ -198,6 +198,43 @@ header .container-menus .menu-menu-secondaire-container ul .menu-item-26 a:befor
   background-image: url("../icons/logo-instagram.svg");
 }
 
+footer {
+  padding-top: 60px;
+  background-color: #28429E;
+  color: #FFFF;
+}
+footer .section-footer .elementor-container {
+  max-width: 1500px !important;
+}
+footer .section-footer .elementor-container .title-h3-f {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+footer .section-footer .elementor-container .col-info-footer .subtitle-info-f {
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+footer .section-footer .elementor-container .col-info-footer .list-schedule ul > li {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+footer .section-footer .elementor-container .col-rs-footer .list-rs ul > li {
+  margin-bottom: 20px;
+}
+footer .section-footer .elementor-container .col-rs-footer .list-rs ul > li .elementor-icon-list-icon {
+  height: 50px;
+  width: 50px;
+  margin-right: 18px;
+}
+footer .section-footer .elementor-container .col-rs-footer .list-rs ul > li .elementor-icon-list-icon svg {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 .section-header {
   background-position: center;
   background-repeat: no-repeat;
@@ -613,6 +650,20 @@ header .container-menus .menu-menu-secondaire-container ul .menu-item-26 a:befor
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.section-cert {
+  background-color: #FFFF;
+}
+.section-cert .elementor-container {
+  max-width: 1500px !important;
+}
+.section-cert .col-cert .elementor-widget-wrap {
+  justify-content: center;
+  align-content: center;
+}
+.section-cert .col-cert .elementor-widget-wrap .img-cert {
+  width: 150px;
 }
 
 /*# sourceMappingURL=main.css.map */
