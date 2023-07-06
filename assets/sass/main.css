@@ -4,6 +4,7 @@
   margin: 0;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,6 +15,10 @@ body {
   letter-spacing: 0.5px;
   line-height: 35px;
   font-size: 18px;
+}
+
+.site-content {
+  padding-top: 150px;
 }
 
 @font-face {
@@ -34,15 +39,21 @@ body {
 }
 
 .btn-card-h {
-  background-color: #FFFF;
-  width: 150px !important;
-  border-radius: 6px;
   margin: 0px auto 0 auto;
+  width: 150px !important;
 }
 .btn-card-h a {
+  width: 150px;
+  background-color: #FFFF !important;
+  line-height: 45px;
+  padding: 0;
   color: #006185;
   font-size: 15px;
   font-weight: bold !important;
+}
+.btn-card-h a:hover {
+  background-color: #00AEEF !important;
+  color: #FFFF !important;
 }
 
 .title-content-info {
@@ -336,7 +347,7 @@ header .container-menus .menu-menu-secondaire-container ul .menu-item-26 a:befor
 }
 
 .section-title {
-  padding: 0px 0 60px 0;
+  padding: 60px 0 60px 0;
 }
 .section-title .elementor-container {
   max-width: 1500px !important;
@@ -525,22 +536,80 @@ header .container-menus .menu-menu-secondaire-container ul .menu-item-26 a:befor
 }
 
 .section-title-swip {
-  padding: 60px 0;
+  padding: 120px 0 60px 0;
 }
 .section-title-swip .elementor-container {
   max-width: 1500px !important;
 }
 
-.swiper {
-  display: block;
-  width: 60vw !important;
-  margin-bottom: 150px;
+.section-container-swiper .elementor-container {
+  max-width: 100% !important;
 }
-.swiper .swiper-slide {
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 150px;
+  justify-content: center;
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .bloc-info {
+  height: 500px;
+  width: 300px;
+  background-color: #28429E;
+  margin-right: 15px;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .bloc-info .link-bloc-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .bloc-info .txt-bloc-info {
+  color: #FFFF;
+  font-size: 25px;
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .bloc-info:hover {
+  transition: 0.3s;
+  background-color: #00AEEF;
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper {
+  display: block;
+  position: unset;
+  width: 70vw !important;
+  margin: 0;
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper .swiper-button-prev, .section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper .swiper-button-next {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-25%);
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper .swiper-button-prev:after, .section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper .swiper-button-next:after {
+  content: "";
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper .swiper-button-prev {
+  left: 0;
+  display: none;
+  background-image: url("../icons/previous.svg");
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper .swiper-button-next {
+  right: 0;
+  display: none;
+  background-image: url("../icons/next.svg");
+}
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper .swiper-slide {
   height: 500px;
   margin-right: 15px !important;
 }
-.swiper .swiper-slide img {
+.section-container-swiper .elementor-container .col-container-swiper .the-swiper .container-swiper .swiper .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;

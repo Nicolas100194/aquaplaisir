@@ -42,7 +42,7 @@
         @include BgCenterCover
 
 .section-title
-  padding: 0px 0 60px 0
+  padding: 60px 0 60px 0
   .elementor-container
     @include WidthContainer
     .col-title
@@ -197,19 +197,63 @@
         font-weight: 600
 
 .section-title-swip
-  padding: 60px 0
+  padding: 120px 0 60px 0
   .elementor-container
     @include WidthContainer
 
-.swiper
-  display: block
-  width: 60vw!important
-  margin-bottom: 150px
-  .swiper-slide
-    height: 500px
 
-    margin-right: 15px!important
-    img
-      width: 100%
-      height: 100%
-      object-fit: cover
+.section-container-swiper
+  .elementor-container
+    max-width: 100%!important
+    .col-container-swiper
+      .the-swiper
+        .container-swiper
+          position: relative
+          @include FlexVerticalCenter
+          margin-bottom: 150px
+          justify-content: center
+          .bloc-info
+            height: 500px
+            width: 300px
+            background-color: $cPrinc
+            margin-right: 15px
+            padding: 20px
+            position: relative
+            cursor: pointer
+            @include FlexCenter
+            .link-bloc-info
+              @include AbsoluteCover
+            .txt-bloc-info
+              color: $cWhite
+              font-size: 25px
+            &:hover
+              transition: $DurationTransition
+              background-color: $cSecond
+          .swiper
+            display: block
+            position: unset
+            width: 70vw!important
+            margin: 0
+            .swiper-button-prev, .swiper-button-next
+              background-position: center
+              background-repeat: no-repeat
+              width: 100px
+              height: 100px
+              transform: translateY(-25%)
+              &:after
+                content: ''
+            .swiper-button-prev
+              left: 0
+              display: none
+              background-image: url("../icons/previous.svg")
+            .swiper-button-next
+              right: 0
+              display: none
+              background-image: url("../icons/next.svg")
+            .swiper-slide
+              height: 500px
+              margin-right: 15px!important
+              img
+                width: 100%
+                height: 100%
+                object-fit: cover
