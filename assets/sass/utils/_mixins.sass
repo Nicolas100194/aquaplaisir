@@ -43,7 +43,20 @@
   color: $cPrinc
 
 
-
 @mixin SpaceSection
   padding: 110px 0
 
+@mixin Gradien
+  background: linear-gradient(90deg, $cSecond 0%, $cPrinc 100%)
+
+@mixin ArrowSwiper
+  background-position: center
+  background-repeat: no-repeat
+  width: 100px
+  height: 100px
+
+@mixin ArrowNext
+  background-image: url("../icons/next.svg")
+
+@mixin ArrowPrev
+  background-image: url("../icons/previous.svg")

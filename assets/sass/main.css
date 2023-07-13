@@ -38,6 +38,11 @@ body {
   opacity: 0.8;
 }
 
+.btn-large a {
+  padding: 0 15px;
+  width: 400px;
+}
+
 .btn-card-h {
   margin: 0px auto 0 auto;
   width: 150px !important;
@@ -66,6 +71,10 @@ body {
   font-weight: 600;
   font-size: 50px;
   color: #28429E;
+}
+
+.title-swim {
+  color: #28429E !important;
 }
 
 header {
@@ -664,6 +673,213 @@ footer .section-footer .elementor-container .col-rs-footer .list-rs ul > li .ele
 }
 .section-cert .col-cert .elementor-widget-wrap .img-cert {
   width: 150px;
+}
+
+.section-head {
+  padding-top: 150px;
+}
+.section-head .elementor-container {
+  max-width: 100% !important;
+  justify-content: space-between;
+}
+.section-head .elementor-container .col-head-img {
+  max-width: 40% !important;
+}
+.section-head .elementor-container .col-head-img .elementor-widget-wrap {
+  padding: 0;
+}
+.section-head .elementor-container .col-head-img .elementor-widget-wrap .form-img {
+  position: absolute;
+  height: 350px;
+  width: 90%;
+  background: linear-gradient(90deg, #00AEEF 0%, #28429E 100%);
+  border-radius: 0 52px 0 0;
+}
+.section-head .elementor-container .col-head-img .elementor-widget-wrap .img-head {
+  margin: 50px 0 0 100px;
+  text-align: left;
+}
+.section-head .elementor-container .col-head-img .elementor-widget-wrap .img-head .elementor-widget-container img {
+  width: 100%;
+  position: relative;
+  border-radius: 52px;
+}
+.section-head .elementor-container .col-content-head {
+  width: 55%;
+  max-height: 900px;
+  padding: 50px;
+  background-color: #FFFF;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.16);
+}
+.section-head .elementor-container .col-content-head .elementor-widget-wrap {
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section-head .elementor-container .col-content-head .title-content {
+  font-weight: 600;
+  font-size: 30px;
+  color: #28429E;
+}
+.section-head .elementor-container .col-content-head .txt-content {
+  color: #3c4452;
+}
+.section-head .elementor-container .col-content-head .elementor-inner-section .elementor-widget-wrap {
+  padding: 0;
+}
+
+.section-txt-blue {
+  text-align: center;
+}
+.section-txt-blue .col-txt-blue .txt-blue {
+  font-size: 25px;
+  font-weight: 500;
+  color: #00AEEF;
+}
+
+.section-gallery {
+  height: 500px;
+}
+.section-gallery .elementor-container {
+  max-width: 1500px !important;
+  height: 100%;
+}
+.section-gallery .elementor-container .col-gallery .img-gallery {
+  height: 100%;
+}
+.section-gallery .elementor-container .col-gallery .img-gallery .elementor-widget-container {
+  height: 100%;
+}
+.section-gallery .elementor-container .col-gallery .img-gallery .elementor-widget-container img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-step {
+  padding-bottom: 90px;
+}
+.section-step .elementor-container {
+  max-width: 100% !important;
+  align-items: center;
+}
+.section-step .elementor-container .col-step {
+  width: 45%;
+  max-height: 550px;
+  overflow: hidden;
+}
+.section-step .elementor-container .col-step .elementor-widget-wrap {
+  padding: 0;
+  transition: 0.5s;
+}
+.section-step .elementor-container .col-step .elementor-widget-wrap .the-step {
+  background-color: #28429E;
+  color: #FFFF;
+  text-align: right;
+  padding: 50px;
+  font-weight: 600;
+  font-size: 27px;
+}
+.section-step .elementor-container .col-step .elementor-widget-wrap .the-step-active {
+  transform: scale(1);
+}
+.section-step .elementor-container .col-step .elementor-widget-wrap .the-step-second {
+  opacity: 0.4;
+}
+.section-step .elementor-container .col-step .elementor-widget-wrap .the-step-third {
+  opacity: 0.1;
+}
+.section-step .elementor-container .col-swiper-step .elementor-widget-wrap {
+  padding: 0;
+  justify-content: center;
+}
+.section-step .elementor-container .col-swiper-step .container-swiper-step {
+  overflow: hidden;
+  width: 90%;
+}
+.section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step {
+  display: block;
+  position: unset;
+}
+.section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step .swiper-slide {
+  padding: 15%;
+}
+.section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step .swiper-button-prev, .section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step .swiper-button-next {
+  transform: translateY(-15%);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+.section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step .swiper-button-prev:after, .section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step .swiper-button-next:after {
+  content: "";
+}
+.section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step .swiper-button-next {
+  background-image: url("../icons/next.svg");
+}
+.section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step .swiper-button-prev {
+  background-image: url("../icons/previous.svg");
+}
+.section-step .elementor-container .col-swiper-step .container-swiper-step .swiper-step .swiper-button-prev:after {
+  display: none;
+}
+
+.section-keyw {
+  color: #FFFF;
+  padding-bottom: 150px;
+}
+.section-keyw .elementor-container {
+  max-height: 380px;
+  background: linear-gradient(90deg, #00AEEF 0%, #28429E 100%);
+  max-width: 100% !important;
+}
+.section-keyw .elementor-container .col-keyw .elementor-widget-wrap {
+  justify-content: center;
+  text-align: center;
+  transform: translateY(-26%);
+}
+.section-keyw .elementor-container .col-keyw .elementor-widget-wrap .img-keyw {
+  background-color: #FFFF;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.29);
+}
+.section-keyw .elementor-container .col-keyw .elementor-widget-wrap .txt-keyw {
+  font-size: 30px;
+}
+.section-keyw .elementor-container .col-keyw .elementor-widget-wrap .inner-section-keyw {
+  max-width: 1500px !important;
+  margin-top: 25px;
+}
+.section-keyw .elementor-container .col-keyw .elementor-widget-wrap .inner-section-keyw .elementor-container {
+  background: none;
+}
+.section-keyw .elementor-container .col-keyw .elementor-widget-wrap .inner-section-keyw .elementor-container .inner-col-keyw .elementor-widget-wrap {
+  transform: translateY(0);
+}
+.section-keyw .elementor-container .col-keyw .elementor-widget-wrap .inner-section-keyw .elementor-container .inner-col-keyw .elementor-widget-wrap .inner-txt {
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.col-c-i-height {
+  height: 420px !important;
+}
+.col-c-i-height .inner-section-info .inner-col-info {
+  border: solid 3px #28429E;
+  padding: 10px 30px;
+  font-size: 27px;
+  color: #28429E;
+  font-weight: 600;
+}
+.col-c-i-height .inner-section-info .inner-col-info:nth-of-type(2) {
+  margin: 0 50px 0 50px;
+}
+.col-c-i-height .txt-f {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
