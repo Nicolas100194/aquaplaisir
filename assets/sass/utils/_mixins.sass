@@ -1,0 +1,62 @@
+@mixin FlexVerticalCenter
+  display: flex
+  align-items: center
+
+@mixin FlexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin BgCenterContain
+  background-position: center
+  background-repeat: no-repeat
+  background-size: contain
+
+@mixin BgCenterCover
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+@mixin AbsoluteCover
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+
+@mixin AbsoluteCenter
+  position: absolute
+  top: 35%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@mixin WidthContainer
+  max-width: 1500px!important
+
+@mixin TitleH2
+  font-size: 40px
+  font-weight: 300
+
+@mixin TitleH3
+  font-weight: 600
+  font-size: 30px
+  color: $cPrinc
+
+
+@mixin SpaceSection
+  padding: 110px 0
+
+@mixin Gradien
+  background: linear-gradient(90deg, $cSecond 0%, $cPrinc 100%)
+
+@mixin ArrowSwiper
+  background-position: center
+  background-repeat: no-repeat
+  width: 100px
+  height: 100px
+
+@mixin ArrowNext
+  background-image: url("../icons/next.svg")
+
+@mixin ArrowPrev
+  background-image: url("../icons/previous.svg")

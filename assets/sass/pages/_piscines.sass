@@ -1,0 +1,163 @@
+@import "../../../../aquaplaisir/assets/sass/utils/mixins"
+@import "../../../../aquaplaisir/assets/sass/utils/variables"
+
+.section-head
+  padding-top: 150px
+  .elementor-container
+    max-width: 100%!important
+    justify-content: space-between
+    .col-head-img
+      max-width: 40%!important
+      .elementor-widget-wrap
+        padding: 0
+        .form-img
+          position: absolute
+          height: 350px
+          width: 90%
+          @include Gradien
+          border-radius: 0 $BorderRadius 0 0
+        .img-head
+          margin: 50px 0 0 100px
+          text-align: left
+          .elementor-widget-container
+            img
+              width: 100%
+              position: relative
+              border-radius: $BorderRadius
+
+    .col-content-head
+      width: 55%
+      max-height: 900px
+      padding: 50px
+      background-color: $cWhite
+      box-shadow: 0 0px 15px $Shadow2
+      .elementor-widget-wrap
+        flex-direction: column
+        justify-content: space-around
+      .title-content
+        @include TitleH3
+      .txt-content
+        color: $cGrayP
+      .elementor-inner-section
+        .elementor-widget-wrap
+          padding: 0
+
+.section-txt-blue
+  text-align: center
+  .col-txt-blue
+    .txt-blue
+      font-size: 25px
+      font-weight: 500
+      color: $cSecond
+
+
+.section-gallery
+  height: 500px
+  .elementor-container
+    @include WidthContainer
+    height: 100%
+    .col-gallery
+      .img-gallery
+        height: 100%
+        .elementor-widget-container
+          height: 100%
+          img
+            height: 100%
+            object-fit: cover
+
+.section-step
+  padding-bottom: 90px
+  .elementor-container
+    max-width: 100%!important
+    align-items: center
+    .col-step
+      width: 45%
+      max-height: 550px
+      overflow: hidden
+      .elementor-widget-wrap
+        padding: 0
+        transition: .5s
+        .the-step
+          background-color: $cPrinc
+          color: $cWhite
+          text-align: right
+          padding: 50px
+          font-weight: 600
+          font-size: 27px
+        .the-step-active
+          transform: scale(1)
+        .the-step-second
+          opacity: .4
+        .the-step-third
+          opacity: .1
+    .col-swiper-step
+      .elementor-widget-wrap
+        padding: 0
+        justify-content: center
+      .container-swiper-step
+        overflow: hidden
+        width: 90%
+        .swiper-step
+          display: block
+          position: unset
+          .swiper-slide
+            padding: 15%
+          .swiper-button-prev, .swiper-button-next
+            transform: translateY(-15%)
+            @include ArrowSwiper
+            &:after
+              content: ''
+          .swiper-button-next
+            @include ArrowNext
+
+          .swiper-button-prev
+            @include ArrowPrev
+            &:after
+              display: none
+
+.section-keyw
+  color: $cWhite
+  padding-bottom: 150px
+  .elementor-container
+    max-height: 380px
+    @include Gradien
+    max-width: 100%!important
+    .col-keyw
+      .elementor-widget-wrap
+        justify-content: center
+        text-align: center
+        transform: translateY(-26%)
+        .img-keyw
+          background-color: $cWhite
+          border-radius: 50%
+          height: 200px
+          width: 200px
+          margin-bottom: 60px
+          @include FlexCenter
+          box-shadow: 0 3px 6px $Shadow
+        .txt-keyw
+          font-size: 30px
+        .inner-section-keyw
+          @include WidthContainer
+          margin-top: 25px
+          .elementor-container
+            background: none
+            .inner-col-keyw
+              .elementor-widget-wrap
+                transform: translateY(0)
+                .inner-txt
+                  font-weight: 600
+                  font-size: 35px
+.col-c-i-height
+  height: 420px!important
+  .inner-section-info
+    .inner-col-info
+      border: solid 3px $cPrinc
+      padding: 10px 30px
+      font-size: 27px
+      color: $cPrinc
+      font-weight: 600
+      &:nth-of-type(2)
+        margin: 0 50px 0 50px
+  .txt-f
+    margin-top: 20px
