@@ -26,18 +26,19 @@
               border-radius: $BorderRadius
 
     .col-content-head
+      height: 100%
       width: 55%
-      max-height: 900px
+      display: inline-block
       padding: 50px
       background-color: $cWhite
       box-shadow: 0 0px 15px $Shadow2
       .elementor-widget-wrap
-        flex-direction: column
-        justify-content: space-around
+
       .title-content
         @include TitleH3
       .txt-content
         color: $cGrayP
+        margin: 50px 0
       .elementor-inner-section
         .elementor-widget-wrap
           padding: 0
@@ -51,19 +52,7 @@
       color: $cSecond
 
 
-.section-gallery
-  height: 500px
-  .elementor-container
-    @include WidthContainer
-    height: 100%
-    .col-gallery
-      .img-gallery
-        height: 100%
-        .elementor-widget-container
-          height: 100%
-          img
-            height: 100%
-            object-fit: cover
+
 
 .section-step
   padding-bottom: 90px
@@ -161,3 +150,30 @@
         margin: 0 50px 0 50px
   .txt-f
     margin-top: 20px
+
+.section-title-a-sw
+  padding-bottom: 50px
+
+
+.section-a-sw, .section-md
+  text-align: center
+  .elementor-container
+    @include WidthContainer
+    .col-a-sw, .col-a-sw-md
+      background-color: $cWhite
+      padding: 50px
+      .icon-a-sw
+      .title-a-sw
+        color: $cSecond
+        font-weight: 600
+        font-size: 25px
+      .txt-a-sw
+        color: $cGrayP
+    .col-md-l
+      margin-right: 25px
+    .col-md-r
+      margin-left: 25px
+.section-md
+  margin: 50px 0
+.section-a-sw-double
+  padding-bottom: 50px

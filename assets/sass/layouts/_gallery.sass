@@ -1,0 +1,46 @@
+@import "../../../../aquaplaisir/assets/sass/utils/mixins"
+@import "../../../../aquaplaisir/assets/sass/utils/variables"
+
+.section-lightbox
+  background-color: rgba(133,133,133,0.71) //provisoire
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: 99
+  .col-lightbox
+    background-color: $cWhite
+    z-index: 100
+    max-height: 90vh
+    position: absolute
+    top: 50vh
+    transform: translateY(-50%)
+    .elementor-widget-wrap
+      overflow: auto
+      .container-img-zoom
+
+        .img-zoom
+
+.section-lightbox-disabled
+  display: none
+
+.section-gallery
+  height: 500px
+  .elementor-container
+    @include WidthContainer
+    height: 100%
+    .col-gallery
+      .img-gallery
+        height: 100%
+        .elementor-widget-container
+          height: 100%
+          overflow: hidden
+          img
+            height: 100%
+            object-fit: cover
+            transition: $DurationTransition
+            &:hover
+              transition: $DurationTransition
+              transform: scale(1.05)
+              cursor: pointer

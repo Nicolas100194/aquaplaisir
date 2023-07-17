@@ -18,6 +18,7 @@ function theme_AquaPlaisir_register_assets(){
     wp_enqueue_script('swiper', get_stylesheet_directory_uri().'/assets/js/swiper.js', array(), null, true);
     wp_enqueue_script('swiperjs-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js');
     wp_enqueue_script('scroll-step', get_stylesheet_directory_uri().'/assets/js/scroll-step.js', array(), null, true);
+    wp_enqueue_script('lightbox', get_stylesheet_directory_uri().'/assets/js/lightbox.js', array(), null, true);
 }
 
 function wpc_mime_types($mimes) {
