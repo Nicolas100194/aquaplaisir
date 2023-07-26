@@ -1,0 +1,39 @@
+.sticky-rdv
+  position: fixed
+  z-index: 999
+  background-color: $cPrinc
+  bottom: 50px
+  right: 50px
+  border-radius: $BorderRadius
+  box-shadow: 0px 3px 6px $Shadow
+  width: 350px
+  animation: pulse 2s infinite
+  a
+    color: $cWhite
+    height: 100%
+    width: 100%
+    display: flex
+    padding: 10px 20px
+    img
+      margin-right: 30px
+    .content-sticky
+      display: flex
+      flex-direction: column
+      span
+        font-size: 19px
+      .sticky-title
+        font-weight: 600
+        margin-bottom: 5px
+
+
+
+@keyframes pulse
+  0%
+    transform: scale(1)
+    box-shadow: 0 0 0 0 rgba(0,66,158)
+  70%
+    transform: scale(1.05)
+    box-shadow: 0 0 0 20px transparent
+  100%
+    transform: scale(1)
+    box-shadow: 0 0 0 0px transparent

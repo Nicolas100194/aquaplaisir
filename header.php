@@ -11,7 +11,7 @@
 <div class="site-container">
     <div class="site-pusher">
         <header>
-            <a class="logo-header-desktop">
+            <a href="http://localhost/aqua-plaisir/" class="logo-header-desktop">
                 <img class="logo-default-header" src="/aqua-plaisir/wp-content/themes/aquaplaisir/assets/img/logo-aquaplaisir.png">
             </a>
             <div class="container-menus">
