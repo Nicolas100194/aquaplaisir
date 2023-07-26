@@ -59,7 +59,7 @@
   .elementor-container
     max-width: 100%!important
     .col-img-info
-      width: 50vw
+      width: 55vw
       .elementor-widget-wrap
         padding: 0px
         .img-info
@@ -85,13 +85,14 @@
     .col-left
       left: 0!important
     .col-content-info
+      max-width: 1600px
+      display: inline-block
       position: absolute
       right: 0
-      width: 60vw
+      width: 55vw
       z-index: 99
       top: 10%
       background-color: $cWhite
-      height: 360px
       box-shadow: 0 0px 15px $Shadow2
       padding: 50px
       .elementor-widget-wrap
@@ -99,7 +100,20 @@
         justify-content: space-around
         .txt-content-info
           color: $cGrayP
-          max-width: 70%
+          max-width: 85%
+          margin: 40px 0
+        .inner-section-blue-p
+          background-color: $cBgBlueP
+          border-left: solid 3px $cSecond
+          padding: 20px
+          margin-bottom: 40px
+          .inner-col-blue-p
+            .title-blue
+              color: $cSecond
+              font-size: 23px
+              font-weight: 600
+            .p-blue
+              color: $cGrayP
         .elementor-inner-section
           .elementor-container
             &:after
@@ -141,7 +155,6 @@
       img
         border-radius: $BorderRadius 0 0 $BorderRadius
     .col-content-info
-      height: 550px
       .elementor-inner-section
         .elementor-container
           flex-direction: revert
