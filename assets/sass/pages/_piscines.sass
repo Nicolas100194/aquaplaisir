@@ -18,10 +18,10 @@
           border-radius: 0 $BorderRadius 0 0
         .img-head
           margin: 50px 0 0 100px
-          text-align: left
           .elementor-widget-container
+            text-align: right
             img
-              width: 100%
+              max-height: 1000px
               position: relative
               border-radius: $BorderRadius
 
@@ -38,10 +38,24 @@
         @include TitleH3
       .txt-content
         color: $cGrayP
-        margin: 50px 0
+        margin-bottom: 30px
       .elementor-inner-section
         .elementor-widget-wrap
           padding: 0
+
+.section-p-b
+  margin-bottom: 20px
+  .elementor-container
+    @include WidthContainer
+    .col-p-b
+      .txt-p-b
+        border-left: solid 3px $cPrinc
+        padding-left: 20px
+        max-width: 800px
+        color: $cGrayP
+        span
+          color: $cPrinc
+
 
 .section-txt-blue
   text-align: center
@@ -141,7 +155,7 @@
   .inner-section-info
     .inner-col-info
       border: solid 3px $cPrinc
-      padding: 10px 30px
+      padding: 10px 20px
       font-size: 27px
       color: $cPrinc
       font-weight: 600
@@ -160,8 +174,9 @@
     @include WidthContainer
     .col-a-sw, .col-a-sw-md
       background-color: $cWhite
-      padding: 50px
+      padding: 30px 50px
       .icon-a-sw
+        margin-bottom: 30px
       .title-a-sw
         color: $cSecond
         font-weight: 600

@@ -5,10 +5,12 @@
   @include BgCenterCover
   background-position: bottom
   height: 80vh
+  overflow: hidden
 
 .section-header
   @include BgCenterCover
   background-position: bottom
+
   .elementor-container
     max-width: 100%!important
     .col-header
@@ -23,11 +25,20 @@
             background-position: bottom
             width: 100%
             img
+              transform: scale3D(1,1,1)
               width: 100%
               object-fit: cover
               max-height: 80vh
               position: relative
               z-index: -1
+              animation: animateBg 20s ease infinite
+            @keyframes animateBg
+              0%
+                transform: scale(1.1)
+              50%
+                transform: scale(1)
+              100%
+                transform: scale(1.1)
         .section-inner-content
           position: absolute
           background-color: $cThird80
@@ -40,6 +51,7 @@
             font-weight: bold
             color: $cWhite
             font-size: 35px
+            
           .txt-header
             font-size: 20px
             font-weight: 400
