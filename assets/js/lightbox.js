@@ -3,6 +3,19 @@ const imgGallery = document.getElementsByClassName('img-gallery')
 const header = document.getElementsByTagName('header')
 let urlImg
 
+function scaleImg(){
+    Array.from(imgGallery).forEach(img=>{
+        img.addEventListener('mouseover', (e)=>{
+            img.classList.toggle('img-hover')
+            img.childNodes[1].childNodes[1].classList.toggle('hover-scale')
+        })
+        img.addEventListener('mouseout', (e)=>{
+            img.classList.toggle('img-hover')
+            img.childNodes[1].childNodes[1].classList.toggle('hover-scale')
+        })
+
+    })
+}
 
 function fullScreenImgGallery(){
     Array.from(imgGallery).forEach(img =>{
@@ -23,6 +36,7 @@ function closeFullScreen(){
     })
 }
 
-
+scaleImg()
 fullScreenImgGallery()
 closeFullScreen()
+
