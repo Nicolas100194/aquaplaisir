@@ -22,6 +22,7 @@ function theme_AquaPlaisir_register_assets(){
     wp_enqueue_script('scroll-step', get_stylesheet_directory_uri().'/assets/js/scroll-step.js', array(), null, true);
     wp_enqueue_script('lightbox', get_stylesheet_directory_uri().'/assets/js/lightbox.js', array(), null, true);
     wp_enqueue_script('map', get_stylesheet_directory_uri().'/assets/js/map.js', array(), null, true);
+    wp_enqueue_script('menu', get_stylesheet_directory_uri().'/assets/js/menu.js', array(), null, true);
 }
 
 function wpc_mime_types($mimes) {
@@ -286,3 +287,4 @@ add_action('wp_enqueue_scripts', 'theme_AquaPlaisir_register_assets');
 
 register_nav_menu('header', 'menu principal');
 register_nav_menu('header-secondary', 'menu secondaire');
+register_nav_menu('header-mobile', 'menu mobile');

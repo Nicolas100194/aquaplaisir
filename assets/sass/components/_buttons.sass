@@ -1,6 +1,68 @@
 @import "../../../../aquaplaisir/assets/sass/utils/mixins"
 @import "../../../../aquaplaisir/assets/sass/utils/variables"
 
+
+.btn-more-info, .btn-get-devis
+  border-radius: $RadiusBtn
+  width: auto!important
+  a
+    text-transform: uppercase
+    line-height: $HeightBtn
+    font-size: 16px
+    padding: 0 15px 0 0
+    @include FlexVerticalCenter
+    &:before
+      content: ''
+      width: 50px
+      height: 35px
+      margin: 0 10px
+      @include BgCenterContain
+  &:hover
+    transition: $DurationTransition
+    transform: translate(10px, 10px)
+
+
+.btn-more-info
+  background-color: $cSecond
+  box-shadow: 10px 10px 0px $ShadowBtnInfo
+  a:before
+    background-image: url("../icons/arrow-btn-more-info.svg")
+  &:hover
+    box-shadow: 0px 0px 0px $ShadowBtnInfo
+
+.btn-get-devis
+  border: solid 3px $cPrinc
+  box-shadow: 10px 10px 0px $ShadowBtnDevis
+  a
+    color: $cPrinc
+    line-height: $HeightBorder
+    &:before
+      background-image: url("../icons/icon-devis.svg")
+  &:hover
+    background-color: $cPrinc!important
+    color: $cWhite
+    box-shadow: 0px 0px 0px $ShadowBtnDevis
+  a:hover:before
+    background-image: url("../icons/icon-devis-white.svg")
+
+.btn-spas
+  margin: auto
+
+
+//a verifier
+
+.btn-s-h
+  width: auto!important
+  margin: auto!important
+  .elementor-button-wrapper
+    a
+      color: $cPrinc
+      font-weight: bold
+      background-color: $cWhite
+      &:hover
+        background-color: $cPrinc
+        color: $cWhite
+
 .btn-content-info
   a
     background-color: $cSecond!important
@@ -13,7 +75,6 @@
       transform: $DurationTransition
       opacity: .8
 
-
 .btn-large
   a
     padding: 0 15px
@@ -22,6 +83,10 @@
 .btn-card-h
   margin: 0px auto 0 auto
   width: 150px!important
+  position: absolute
+  bottom: -25px
+  left: 50%
+  transform: translateX(-50%)
   a
     width: 150px
     background-color: $cWhite!important
@@ -30,6 +95,7 @@
     color: $cThird
     font-size: 15px
     font-weight: bold!important
+
     &:hover
       background-color: $cSecond!important
       color: $cWhite!important

@@ -2,36 +2,99 @@
 @import "../../../../aquaplaisir/assets/sass/utils/variables"
 
 .section-header
+  max-height: $HeightHeader
+  .elementor-container
+    width: 100%!important
+    max-width: unset!important
+    max-height: $HeightHeader
+    .col-header
+      max-height: $HeightHeader
+      .elementor-widget-wrap
+        padding: 0px
+        max-height: $HeightHeader
+        .video-h
+          max-height: $HeightHeader
+          margin-bottom: 0px
+          .elementor-widget-container
+            display: flex
+            max-height: $HeightHeader
+            .e-hosted-video
+              width: 100%
+        .inner-s-h
+          @include AbsoluteCenter
+          width: 80%
+          .inner-col-s-h
+            .title-s-h
+              color: $cWhite
+              font-size: 45px
+              font-weight: 600
+              text-align: center
+              margin-bottom: 30px
+
+
+@media (max-width: 1200px)
+  .section-header
+    .elementor-container
+      .col-header
+        .elementor-widget-wrap
+          .inner-s-h
+            .inner-col-s-h
+              .title-s-h
+                font-size: 30px
+
+
+@media (max-width: 768px)
+  .section-header
+    .elementor-container
+      .col-header
+        .elementor-widget-wrap
+          .inner-s-h
+            position: relative
+            top: unset
+            left: unset
+            transform: unset
+            width: 100%
+            background-color: $cPrinc
+            padding: 30px
+            .inner-col-s-h
+              .title-s-h
+                font-size: 25px
+
+@media (max-width: 620px)
+  .section-header
+    .elementor-container
+      .col-header
+        .elementor-widget-wrap
+          .inner-s-h
+            .inner-col-s-h
+              .title-s-h
+                font-size: 20px
+
+//.section-header
   @include BgCenterCover
   background-position: bottom
   height: 80vh
+  min-height: 700px
   overflow: hidden
-
-.section-header
-  @include BgCenterCover
-  background-position: bottom
-
   .elementor-container
+    max-height: 100%
     max-width: 100%!important
     .col-header
       .elementor-widget-wrap
         padding: 0px
         position: relative
         .img-header
+          height: 100%
           .elementor-widget-container
-            background-image: url("../img/form-home.svg")
-            background-repeat: no-repeat
-            background-size: contain
-            background-position: bottom
-            width: 100%
+            overflow: hidden
+            height: 100%
             img
-              transform: scale3D(1,1,1)
               width: 100%
               object-fit: cover
-              max-height: 80vh
+              height: 100%
               position: relative
               z-index: -1
-              animation: animateBg 20s ease infinite
+              animation: animateBg 20s  infinite
             @keyframes animateBg
               0%
                 transform: scale(1.1)
@@ -51,7 +114,6 @@
             font-weight: bold
             color: $cWhite
             font-size: 35px
-            
           .txt-header
             font-size: 20px
             font-weight: 400
@@ -86,10 +148,73 @@
               background-image: url("../icons/arrow-right.svg")
 
 
+//@media (max-width: 1650px)
+  .section-header .elementor-container .col-header .elementor-widget-wrap .section-inner-content
+    max-width: unset
+    width: 75%
+
+
+//@media (max-width: 1310px)
+  .section-header
+    height: unset
+    min-height: unset
+    max-height: 700px
+
+
+//@media (max-width: 910px)
+  .section-header
+    .elementor-container
+      .col-header
+        .elementor-widget-wrap
+          .section-inner-content
+            .title-header
+              font-size: 28px
+            .txt-header
+              font-size: 17px
+          .btn-rdv-header
+            bottom: 100px
+            a
+              line-height: 60px
 
 
 
-
-
-
+//@media (max-width: 768px)
+  .section-header
+    overflow: unset
+    .elementor-container
+      .col-header
+        .elementor-widget-wrap
+          .img-header
+            height: auto
+            margin-bottom: 0px
+            height: 350px
+          .section-inner-content
+            position: relative
+            transform: unset
+            border-radius: 0px
+            left: unset
+            bottom: unset
+            top: unset
+            width: 100%
+            text-align: center
+            background-color: $cPrinc
+            margin-bottom: 0px
+          .btn-rdv-header
+            bottom: -60px
+            margin-bottom: 0px
+            transform: unset
+            background-color: $cSecond
+            z-index: 99
+            right: 0
+            left: 0
+            border-radius: 0px
+            text-align: center
+            &:hover
+              transition: unset
+              padding-right: unset
+              display: unset
+              font-weight: unset
+              &:after
+                content: ''
+                display: none
 
