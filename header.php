@@ -16,9 +16,19 @@
             </a>
             <div class="container-menus">
                 <?php
-                wp_nav_menu(['theme_location' => 'header']);
-                wp_nav_menu(['theme_location' => 'header-secondary']);
+                    wp_nav_menu(['theme_location' => 'header']);
+                    wp_nav_menu(['theme_location' => 'header-secondary']);
                 ?>
             </div>
+            <div class="container-logo-mobile">
+                <a class="logo-menu-mobile" id="header-icon">
+                    <img class="menu-mobile" href="#" src="/aqua-plaisir/wp-content/themes/aquaplaisir/assets/icons/icon-menu-mobile.svg">
+                </a>
+            </div>
+
+                <?php
+                    wp_nav_menu(['theme_location' => 'header-mobile'])
+                ?>
+
         </header>
         <div class="site-content">

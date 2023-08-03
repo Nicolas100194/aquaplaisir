@@ -1,5 +1,8 @@
 @import "../../../../aquaplaisir/assets/sass/utils/mixins"
 @import "../../../../aquaplaisir/assets/sass/utils/variables"
+html
+  height: 100%
+
 
 *
   font-family: Montserrat
@@ -11,6 +14,36 @@
 
 body
   background-color: $cBg
+  height: 100%
+
+.with-sidebar
+  .site-container
+    overflow: hidden
+    .site-pusher
+      transition: $DurationTransition
+      transform: translateX(-400px)
+      .site-cache
+        cursor: pointer
+        @include AbsoluteCover
+        background-color: rgba(75, 75, 75, 0.9)
+        z-index: 999
+
+.site-container
+  height: 100%
+  .site-pusher
+    height: 100%
+    .site-content
+      overflow-y: scroll
+      scrollbar-width: none
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+
+.site-container
+  .site-pusher
+    transition: $DurationTransition
 
 .p
   letter-spacing: 0.5px
@@ -31,3 +64,4 @@ body
 .site-content
   padding-top: 150px
   position: relative
+
