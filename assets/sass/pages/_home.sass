@@ -207,10 +207,11 @@
   @include BgCenterCover
   .elementor-container
     width: 50%
+    min-width: 1000px
     .col-nb-project, .col-nb-year
       text-align: center
       .nb-project, .nb-year
-        font-size: 60px
+        font-size: 90px
         font-weight: 600
       .txt-nb-project, .txt-nb-year
         font-size: 35px
@@ -413,6 +414,14 @@
             max-width: 100%
           .btn-spas
             margin: auto
+  .section-skills
+    .elementor-container
+      flex-direction: column
+      align-items: center
+      min-width: unset
+      width: 90%
+      .col-nb-project
+        margin-bottom: 50px
 @media (max-width: 920px)
   .section-title
     .elementor-container

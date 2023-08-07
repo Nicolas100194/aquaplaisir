@@ -2,6 +2,44 @@
 @import "../../../../aquaplaisir/assets/sass/utils/variables"
 
 
+
+.btn-b-large
+  border-radius: $RadiusBtn
+  width: 400px!important
+  box-shadow: 5px 5px 0px $ShadowBtnInfo
+  background-color: $cSecond
+  &:hover
+    transition: $DurationTransition
+    transform: translate(5px, 5px)
+    box-shadow: 0px 0px 0px $ShadowBtnInfo
+  a
+    color: $cWhite
+    text-align: center
+    width: 100%
+    font-size: 16px
+
+
+.btn-apt
+  border-radius: $RadiusBtn
+  width: auto!important
+  box-shadow: 10px 10px 0px $ShadowBtnDevis
+  border: solid 2px $cPrinc
+  background-color: $cWhite
+  margin-top: 50px
+  &:hover
+    transition: $DurationTransition
+    transform: translate(10px, 10px)
+    box-shadow: 0px 0px 0px $ShadowBtnDevis
+  a
+    text-transform: uppercase
+    line-height: $HeightBtn
+    font-size: 16px
+    padding: 0px 15px
+    color: $cPrinc
+
+  a:hover
+    color: $cPrinc
+
 .btn-more-info, .btn-get-devis
   border-radius: $RadiusBtn
   width: auto!important
@@ -20,7 +58,6 @@
   &:hover
     transition: $DurationTransition
     transform: translate(10px, 10px)
-
 
 .btn-more-info
   background-color: $cSecond
