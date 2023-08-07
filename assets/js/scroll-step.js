@@ -1,80 +1,93 @@
-//récupérer propriété alt d'élément img qui a comme parent la div avec classe "active"
-//appliquer la classe "the-step-active" a la div qui a le noeud texte correspondant
+document.addEventListener('DOMContentLoaded', function() {
 
-let steps = document.getElementsByClassName('the-step')
-let firstStep = steps[0]
-firstStep.classList.add('the-step-active')
-let divImg = document.getElementsByClassName('swiper-slide')
-let slideOne = divImg[0].childNodes[0].alt
+    const swiperButtonNext = document.getElementsByClassName('swiper-button-next')
+    const swiperButtonPrev = document.getElementsByClassName('swiper-button-prev')
+    const steps = document.getElementsByClassName('the-step')
+    const containerSteps = document.getElementsByClassName('elementor-element-135a783')
 
-
-function swipeActive(){
-    let buttonSwiper = document.getElementsByClassName('btn-swiper')
-    Array.from(buttonSwiper).forEach(button =>{
-        button.addEventListener('click', (e) => {
-            setTimeout(divActive(button), 200)
-        })
-    })
-}
-
-function divActive(button){
-    let divImg = document.getElementsByClassName('swiper-slide-active')
-    let divImgNext
-    let thirdDiv
-    if (button.classList[0] === "swiper-button-prev"){
-        divImgNext = divImg[0].previousSibling
-    } else {
-        divImgNext = divImg[0].nextElementSibling
+    function clearClassStep(firstStep, secondStep, thirdStep){
+        firstStep.classList.remove('the-step-active')
+        secondStep.classList.remove('the-step-second')
+        thirdStep.classList.remove('the-step-third')
     }
-    let img = divImgNext.lastChild.alt
 
-    Array.from(steps).forEach(element =>{
-        if(element.classList.length == 6){
-            if(element.classList[6] === "the-step-active"){
-                element.classList.remove('the-step-active')
-            }
+    function addClassStep(firstStep, secondStep, thirdStep){
+        firstStep.classList.add('the-step-active')
+        secondStep.classList.add('the-step-second')
+        thirdStep.classList.add('the-step-third')
+    }
+
+
+    function indexStep(classStep){
+        let arrayFromCollection = Array.from(steps)
+        let index = arrayFromCollection.findIndex(element => element.classList.contains(classStep))
+        return index
+    }
+
+    function translateNext(){
+        let translateCurrent = containerSteps[0].style.transform
+        let value = 0
+        let valueTransform = 125
+        if (translateCurrent.length === 0 ){
+            containerSteps[0].style.transform = "translateY(-125px)"
         }
-        if(element.childNodes[1].childNodes[2].textContent.trim() == img){
-            element.classList.add('the-step-active')
-            element.classList.remove('the-step-second')
-            element.nextElementSibling.classList.add('the-step-second')
-            element.nextElementSibling.classList.remove('the-step-third')
-            thirdDiv = element.nextElementSibling.nextElementSibling
-            thirdDiv.classList.add('the-step-third')
-            console.log(thirdDiv.classList)
-        }
-    })
-    divMove(button.classList[0])
-}
-
-function divMove(button){
-    let valueTransform = 185
-    if(button === "swiper-button-prev"){
-        valueTransform = -185
-    }
-
-    let colStep = document.getElementsByClassName('col-step')
-    colStep = colStep[0].childNodes[1]
-    let translateCurrent = colStep.style.transform
-    if (translateCurrent.length === 0 ){
-        colStep.style.transform = "translateY(-185px)"
-    }
-    else {
-        let value
         if(translateCurrent.length == 18 ){
             value = parseInt(translateCurrent.substring(12,15), 10)
         } else if (translateCurrent.length == 15){
             value = parseInt(translateCurrent[11], 10)
         }
         value += valueTransform
-        colStep.style.transform = "translateY(-" + value + "px)"
+        containerSteps[0].style.transform = "translateY(-" + value + "px)"
     }
-}
+
+    function translatePrev(){
+        let translateCurrent = containerSteps[0].style.transform
+        let valueTransform = 125
+        let value
+        value = parseInt(translateCurrent.substring(12,15), 10)
+        value = value - valueTransform
+        containerSteps[0].style.transform = "translateY(-" + value + "px)"
+    }
+
+    function setStylesSteps(isNext = false, isPrevious = false){
+        let indexFirstStep = indexStep('the-step-active')
+        let indexSecondStep = indexStep('the-step-second')
+        let indexThirdStep = indexStep('the-step-third')
+        if(isNext == true){
+            clearClassStep(steps[indexFirstStep], steps[indexSecondStep], steps[indexThirdStep])
+            addClassStep(steps[indexFirstStep+1], steps[indexSecondStep+1], steps[indexThirdStep+1])
+            translateNext()
+        } else {
+            clearClassStep(steps[indexFirstStep], steps[indexSecondStep], steps[indexThirdStep])
+            addClassStep(steps[indexFirstStep-1], steps[indexSecondStep-1], steps[indexThirdStep-1])
+            translatePrev()
+        }
+    }
+
+    function blueTitleStep(){
+        let stepActive = document.getElementsByClassName('the-step-active')
+        let textNode = stepActive[0].childNodes[1].childNodes[1].childNodes[0]
+        let span = document.createElement("span")
+
+    }
+
+    blueTitleStep()
+
+    function nextSlide(){
+        swiperButtonNext[0].addEventListener('click', (e) => {
+            setStylesSteps(true, false)
+        })
+        swiperButtonPrev[0].addEventListener('click', (e) =>{
+            setStylesSteps(false, true)
+        })
+    }
+
+    nextSlide()
+})
 
 
 
 
 
-swipeActive()
 
 

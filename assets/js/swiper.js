@@ -15,6 +15,21 @@
                 prevEl: '.swiper-button-prev',
             },
 
+            //responsive
+            breakpoints: {
+                1482: {
+                    slidesPerView: 3
+                },
+
+                1000: {
+                    slidesPerView: 2
+                },
+
+                200: {
+                    slidesPerView: 1
+                }
+            }
+
         });
 
 

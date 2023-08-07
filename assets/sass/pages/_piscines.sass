@@ -2,49 +2,88 @@
 @import "../../../../aquaplaisir/assets/sass/utils/variables"
 
 .section-head
-  padding-top: 150px
+  box-shadow: 0px 0px 15px $Shadow2
   .elementor-container
     max-width: 100%!important
-    justify-content: space-between
-    .col-head-img
-      max-width: 40%!important
-      .elementor-widget-wrap
-        padding: 0
-        .form-img
-          position: absolute
-          height: 350px
-          width: 90%
-          @include Gradien
-          border-radius: 0 $BorderRadius 0 0
-        .img-head
-          margin: 50px 0 0 100px
-          .elementor-widget-container
-            text-align: right
-            img
-              max-height: 1000px
-              position: relative
-              border-radius: $BorderRadius
+  .col-content-head, .col-img-head
+    .elementor-widget-wrap
+      padding: 0px
+  .col-img-head
+    .img-head
+      margin-bottom: 0px
+      text-align: right
+      img
+        width: 80%
+        height: 750px
+        object-fit: cover
+        object-position: 50% 78%
+    .inner-section-head
+      position: absolute
+      background-image: url("../img/bg-content-head.svg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: right
+      width: 60%
+      bottom: 0
+      top: 0
+      .elementor-container
+        height: 80%
+        position: absolute
+        top: 50%
+        left: 30%
+        transform: translate(-30%, -50%)
+        .inner-col-head
+          .elementor-widget-wrap
+            padding-top: 10%
+            .title-head
+              font-weight: 600
+              font-size: 30px
+              color: $cSecond
+              font-style: italic
+              h2
+                line-height: 65px
 
-    .col-content-head
-      height: 100%
-      width: 55%
-      display: inline-block
-      padding: 50px
-      background-color: $cWhite
-      box-shadow: 0 0px 15px $Shadow2
-      .elementor-widget-wrap
 
-      .title-content
-        @include TitleH3
-      .txt-content
-        color: $cGrayP
-        margin-bottom: 30px
-      .elementor-inner-section
-        .elementor-widget-wrap
-          padding: 0
+.section-d-elt
+  padding-top: 80px
+  .elementor-container
+    @include WidthContainer
+  .col-img-d-elt
+      .color-img
+        position: absolute
+        top: -10px
+        left: -10px
+        width: 250px
+        height: 250px
+        background-color: $cSecond
+      .img-d-elt
+        img
+          width: 100%
+          box-shadow: 0px 0px 25px $ShadowImgGray
+        &:hover
+          transform: scale(0.98)
+          transition: $DurationTransition
+
+  .col-content-d-elt
+    padding-left: 70px
+    .elementor-widget-wrap
+      flex-direction: column
+    .title-d-elt
+      margin-bottom: 0px
+    .txt-d-elt
+      color: $cGrayP
+      margin: 30px 0
+      strong
+        color: $cPrinc
+
+.section-title-gallery
+  margin-top: 70px
+  background-color: $cGray2
+  padding: 50px 0 50px 40px
 
 .section-p-b
-  margin-bottom: 20px
+  background-color: $cGray2
+  padding-bottom: 20px
   .elementor-container
     @include WidthContainer
     .col-p-b
@@ -72,39 +111,51 @@
   padding-bottom: 90px
   .elementor-container
     max-width: 100%!important
-    align-items: center
     .col-step
-      width: 45%
-      max-height: 550px
+      width: 40%
+      max-height: 800px
       overflow: hidden
+      background-color: $cPrinc
+      padding-top: 50px
       .elementor-widget-wrap
+        overflow: hidden
         padding: 0
         transition: .5s
+        .elementor-inner-section
+          overflow: hidden
+          height: 360px
         .the-step
-          background-color: $cPrinc
           color: $cWhite
-          text-align: right
-          padding: 50px
+          padding: 20px
           font-weight: 600
           font-size: 27px
+          width: 95%
+          border-left: solid 5px $cSecond
         .the-step-active
-          transform: scale(1)
+          font-size: 35px
+          animation: borderAnim forwards 0.5s
+        @keyframes borderAnim
+          0%
+
+            border-left: solid 0px $cSecond
+          100%
+            border-left: solid 50px $cSecond
         .the-step-second
           opacity: .4
         .the-step-third
           opacity: .1
     .col-swiper-step
+      width: 60%
       .elementor-widget-wrap
         padding: 0
         justify-content: center
       .container-swiper-step
         overflow: hidden
-        width: 90%
+        max-height: 800px
         .swiper-step
           display: block
           position: unset
           .swiper-slide
-            padding: 15%
           .swiper-button-prev, .swiper-button-next
             transform: translateY(-15%)
             @include ArrowSwiper
@@ -120,6 +171,7 @@
 
 .section-keyw
   color: $cWhite
+  padding-top: 150px
   padding-bottom: 150px
   .elementor-container
     max-height: 380px
