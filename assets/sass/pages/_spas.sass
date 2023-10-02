@@ -1,5 +1,5 @@
 .section-g-spa
-  @include GradienReverse
+  background: $cPrinc
   height: 350px
   margin-bottom: 450px
   .elementor-container
@@ -36,3 +36,23 @@
               .elementor-button
                 margin: auto
                 display: block
+
+@media (max-width: 1024px)
+  .section-g-spa
+    height: auto
+    margin-bottom: 0px
+    padding-bottom: 50px
+    .elementor-container
+      .col-g-spa
+        .elementor-widget-wrap
+          .title-g-spa
+            margin: 30px 0px
+            text-align: center
+          .inner-section-g-s
+            position: unset
+            .elementor-container
+              flex-direction: column
+              align-content: center
+              .inner-col-g-s
+                width: 80%
+                margin-bottom: 50px

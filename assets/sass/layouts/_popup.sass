@@ -16,7 +16,8 @@
       font-size: 40px
       font-weight: 600
       text-transform: uppercase
-      margin-top: 20px
+      margin-top: 75px
+      text-align: center
     .pum-content
       .btn-large-popup
         position: relative
@@ -39,7 +40,7 @@
             height: 30px
             margin-left: 10px
             background-image: url("../icons/arrow-right.svg")
-            @include BgCenterContain
+            @include BgCenterCover
         &:hover
           transform: $DurationTransition
           opacity: .8
@@ -48,14 +49,12 @@
         display: flex
         color: $cGrayP
         .img-popup
-          max-width: unset!important
-          height: unset!important
-          width: 600px
+          width: 40%
+          object-fit: contain
         .container-content-popup
+          width: 60%
           margin-left: 30px
           padding: 30px
-          h4
-            margin-bottom: 30px!important
           .txt-p-popup
             ul
               margin-top: 30px
@@ -72,6 +71,28 @@
       right: 20px!important
       top: 20px!important
       font-size: 19px!important
+
+@media (max-width: 1100px)
+  .pum-overlay #popmake-605 .pum-content .container-cat-popup
+    flex-direction: column
+    align-items: center
+    .img-popup, .container-content-popup
+      width: 100%
+      margin-left: 0px
+    .img-popup
+      max-height: 500px
+
+@media (max-width: 880px)
+  .pum-overlay #popmake-605 #pum_popup_title_605
+    font-size: 30px
+
+@media (max-width: 760px)
+  .pum-overlay #popmake-605 .pum-content .btn-large-popup a
+    flex-direction: column
+    text-align: center
+    &:after
+      margin-top: 5px
+      margin-left: 0px
 
 
 #pum-627
@@ -100,8 +121,8 @@
         margin-top: 50px
         form
           display: inline-block
-          width: 33%
-          min-width: 1000px
+          width: 100%
+          max-width: 1300px
           left: 50%
           position: relative
           transform: translateX(-50%)
@@ -168,15 +189,15 @@
             font-weight: 600
             font-size: 19px
       .info-input
-        width: 80%
+        width: 100%
+        max-width: 1300px
         margin: auto
         color: $cWhite
         span
-          width: 33%
+          width: 100%
           display: inline-block
           left: 50%
           position: relative
-          min-width: 1000px
           transform: translateX(-50%)
 
     .pum-close
@@ -186,3 +207,41 @@
       box-shadow: unset
       right: 20px
       top: 10px
+
+@media (max-width: 1100px)
+  #pum-627
+    #popmake-627
+      .pum-content
+        h2
+          font-size: 35px
+        h3
+          font-size: 30px
+
+@media (max-width: 880px)
+  #pum-627
+    #popmake-627
+      .pum-content
+        .wpcf7
+          form
+            fieldset
+              flex-direction: column
+              margin: 0
+              p
+                width: 100%
+            p
+              margin: 10px 0
+              width: 100%
+
+@media (max-width: 550px)
+  #pum-627
+    #popmake-627
+      .pum-content
+        width: 90%
+        h2
+          margin-top: 70px
+          font-size: 25px
+        h3
+          font-size: 20px
+        .wpcf7-submit
+          width: 100%!important
+

@@ -1,80 +1,62 @@
 @import "../../../../aquaplaisir/assets/sass/utils/mixins"
 @import "../../../../aquaplaisir/assets/sass/utils/variables"
 
-.section-head
+
+.section-h
   box-shadow: 0px 0px 15px $Shadow2
+  z-index: 99
   .elementor-container
-    max-width: 100%!important
-  .col-content-head, .col-img-head
-    .elementor-widget-wrap
-      padding: 0px
-  .col-img-head
-    .img-head
-      margin-bottom: 0px
-      text-align: right
-      img
-        width: 80%
-        height: 750px
-        object-fit: cover
-        object-position: 50% 78%
-    .inner-section-head
-      position: absolute
-      background-image: url("../img/bg-content-head.svg")
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: right
-      width: 60%
-      bottom: 0
-      top: 0
-      .elementor-container
-        height: 80%
-        position: absolute
-        top: 50%
-        left: 30%
-        transform: translate(-30%, -50%)
-        .inner-col-head
-          .elementor-widget-wrap
-            padding-top: 10%
-            .title-head
-              font-weight: 600
-              font-size: 30px
-              color: $cSecond
-              font-style: italic
-              h2
-                line-height: 65px
+    max-width: 100vw!important
+    .col-content-h
+      position: unset
+      width: 30%
+      background-color: $cSecond
+      padding: 0 30px
+      .elementor-widget-wrap
+        padding: 0px
+        position: unset
+        justify-content: center
+        align-content: center
+        .img-bg-content-h
+          display: none
+          position: absolute
+          bottom: 0
+          top: 0
+          margin: 0
+          width: 83%
+          .elementor-widget-container
+            height: 100%
+            img
+              height: 100%
+              width: 100%
+              object-fit: cover
+              object-position: right
+              position: relative
 
+        .title-h
+          font-size: 25px
+          color: $cWhite
+          text-align: center
+          font-weight: 600
+          margin-bottom: 50px
+        .btn-apt
 
-.section-d-elt
-  padding-top: 80px
-  .elementor-container
-    @include WidthContainer
-  .col-img-d-elt
-      .color-img
-        position: absolute
-        top: -10px
-        left: -10px
-        width: 250px
-        height: 250px
-        background-color: $cSecond
-      .img-d-elt
+    .col-img-h
+      width: 70%
+      .elementor-widget-wrap
+        padding: 0
         img
-          width: 100%
-          box-shadow: 0px 0px 25px $ShadowImgGray
-        &:hover
-          transform: scale(0.98)
-          transition: $DurationTransition
+          width: 150%
+          height: 600px
+          object-fit: cover
+          object-position: 50% 78%
 
-  .col-content-d-elt
-    padding-left: 70px
-    .elementor-widget-wrap
-      flex-direction: column
-    .title-d-elt
-      margin-bottom: 0px
-    .txt-d-elt
-      color: $cGrayP
-      margin: 30px 0
-      strong
-        color: $cPrinc
+
+
+.elementor-element-e25f5e9
+  .elementor-widget-wrap
+    align-content: center
+
 
 .section-title-gallery
   margin-top: 70px
@@ -87,14 +69,19 @@
   .elementor-container
     @include WidthContainer
     .col-p-b
-      .txt-p-b
-        border-left: solid 3px $cPrinc
-        padding-left: 20px
-        max-width: 800px
-        color: $cGrayP
-        span
-          color: $cPrinc
+      .elementor-widget-wrap
+        padding: 0 5px
+        .txt-p-b
+          border-left: solid 3px $cPrinc
+          padding-left: 20px
+          max-width: 800px
+          color: $cGrayP
+          span
+            color: $cPrinc
 
+.section-blue
+  background-color: $cPrinc
+  padding: 40px 0
 
 .section-txt-blue
   text-align: center
@@ -108,11 +95,13 @@
 
 
 .section-step
-  padding-bottom: 90px
+  padding: 70px 0
+  background-color: $cPrinc
   .elementor-container
-    max-width: 100%!important
+    max-width: 1700px!important
+    padding: 0px 30px
     .col-step
-      width: 40%
+      width: 50%
       max-height: 800px
       overflow: hidden
       background-color: $cPrinc
@@ -123,33 +112,40 @@
         transition: .5s
         .elementor-inner-section
           overflow: hidden
-          height: 360px
-        .the-step
-          color: $cWhite
-          padding: 20px
-          font-weight: 600
-          font-size: 27px
-          width: 95%
-          border-left: solid 5px $cSecond
-        .the-step-active
-          font-size: 35px
-          animation: borderAnim forwards 0.5s
-        @keyframes borderAnim
-          0%
+          height: 558px
+          .elementor-container
+            padding: 0px
+            .elementor-inner-column
+              transition: $DurationTransition
+              .the-step
+                color: $cWhite
+                padding: 50px 20px
+                font-weight: 600
+                font-size: 27px
+                width: 95%
+                border-left: solid 5px $cSecond
+              .the-step-active
+                font-size: 35px
+                animation: borderAnim forwards 0.5s
+              @keyframes borderAnim
+                0%
 
-            border-left: solid 0px $cSecond
-          100%
-            border-left: solid 50px $cSecond
-        .the-step-second
-          opacity: .4
-        .the-step-third
-          opacity: .1
+                  border-left: solid 0px $cSecond
+                100%
+                  border-left: solid 50px $cSecond
+              .the-step-second
+                opacity: .4
+              .the-step-third
+                opacity: .1
     .col-swiper-step
-      width: 60%
+      width: 50%
+      background-color: $cPrinc
       .elementor-widget-wrap
         padding: 0
         justify-content: center
+        align-content: center
       .container-swiper-step
+
         overflow: hidden
         max-height: 800px
         .swiper-step
@@ -169,10 +165,13 @@
             &:after
               display: none
 
+
+
+
 .section-keyw
   color: $cWhite
-  padding-top: 150px
-  padding-bottom: 150px
+  padding-top: 100px
+  padding-bottom: 50px
   .elementor-container
     max-height: 380px
     @include Gradien
@@ -202,19 +201,20 @@
                 transform: translateY(0)
                 .inner-txt
                   font-weight: 600
-                  font-size: 35px
-.col-c-i-height
-  .inner-section-info
-    .inner-col-info
-      border: solid 3px $cPrinc
-      padding: 10px 20px
-      font-size: 27px
-      color: $cPrinc
-      font-weight: 600
-      &:nth-of-type(2)
-        margin: 0 50px 0 50px
-  .txt-f
-    margin-top: 20px
+                  font-size: 30px
+
+.inner-section-i-a
+  margin-bottom: 20px
+  .inner-col-i-a
+    border: solid 2px $cSecond
+    text-align: center
+    font-weight: 600
+    .key-i-a
+      color: $cSecond
+    &:nth-of-type(2)
+      margin: 0 15px
+
+
 
 .section-title-a-sw
   padding-bottom: 50px
@@ -232,7 +232,7 @@
       .title-a-sw
         color: $cSecond
         font-weight: 600
-        font-size: 25px
+        font-size: 20px
       .txt-a-sw
         color: $cGrayP
     .col-md-l
@@ -244,6 +244,102 @@
 .section-a-sw-double
   padding-bottom: 50px
 
+@media (max-width: 1500px)
+  .section-p-b
+    .elementor-container
+      .col-p-b
+        .elementor-widget-wrap
+          padding: 0 30px
+  .section-a-sw
+    margin: 0 20px
+  .section-md
+    margin: 50px 20px
+
+@media (max-width: 1280px)
+  .section-h
+    .elementor-container
+      .col-content-h
+        .elementor-widget-wrap
+          .title-h
+            font-size: 20px
+
+@media (max-width: 1200px)
+  .section-h
+    .elementor-container
+      .col-content-h
+        width: 40%
+      .col-img-h
+        width: 60%
+  .section-blue
+    padding: 20px 0
+  .section-step
+    padding: 40px 0
+  .inner-section-i-a
+    .elementor-container
+      flex-direction: column
+      .inner-col-i-a
+        width: 100%
+      .inner-col-i-a:nth-of-type(2)
+        margin: 15px 0
+
+@media (max-width: 1025px)
+  .section-md
+    .elementor-container
+      .col-md-l
+        margin-right: 0px
+        margin-bottom: 50px
+      .col-md-r
+        margin-left: 0px
+      .col-a-sw-md
+        width: 100%
 
 
+@media (max-width: 1000px)
+  .section-step
+    .elementor-container
+      flex-direction: column-reverse
+      align-content: center
+      padding: 0px
+      .col-step, .col-swiper-step
+        width: 80%
+  .section-i
+    .col-i-content
+      .title-i-a-content
+        text-align: center
+  .section-keyw
+    .elementor-container
+      .col-keyw
+        .elementor-widget-wrap
+          .txt-keyw
+            font-size: 25px
+          .inner-section-keyw
+            .elementor-container
+              .inner-col-keyw
+                .elementor-widget-wrap
+                  .inner-txt
+                    font-size: 25px
 
+@media (max-width: 768px)
+  .section-h
+    .elementor-container
+      flex-direction: column-reverse
+      .col-img-h, .col-content-h
+        width: 100%
+      .col-content-h
+        .title-h
+          margin: 30px 0!important
+        .btn-h-apt
+          margin-bottom: 30px
+      .col-img-h
+        .elementor-widget-wrap
+          img
+            height: 450px
+
+
+@media (max-width: 767px)
+  .section-keyw .elementor-container
+    max-height: 445px
+
+@media (max-width: 524px)
+  .section-keyw .elementor-container
+    max-height: 480px

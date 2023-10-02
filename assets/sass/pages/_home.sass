@@ -42,162 +42,127 @@
         margin-left: 50px
         @include BgCenterCover
 
-.section-title
-  padding: 100px 0 100px 40px
-  .elementor-container
-    max-width: 1700px!important
-    .col-title
-      .title
-        color: $cSecond
-        @include TitleH2
-        h2
-          line-height: 70px
-          span
-            font-weight: 600
 
+.section-title-primary
+  padding: 70px 0px
 
-.section-info-p
+.section-i, .section-i-s
   .elementor-container
-    max-width: 100%!important
-    justify-content: space-between
-    .col-img-info-p, .col-content-p
-      .elementor-widget-wrap
-        padding: 0px
-    .col-img-info-p
-      .elementor-widget-wrap
-        align-content: center
-        .img-info-p
-          text-align: right
+    @include WidthContainer
+    .col-i-img, .col-i-content
+      margin: 25px
+    .col-i-img
+      .img-i
+        box-shadow: 0 0 25px $ShadowImgGray
+        z-index: 99
+        height: 100%
+        width: 100%
+        &:before
+          content: ''
+          background-color: $cSecond
+          width: 180px
+          height: 180px
+          display: inline-block
+          position: absolute
+          left: -20px
+          top: -20px
+          z-index: -1
+        .elementor-widget-container
+          height: 100%
           img
             object-fit: cover
-            max-height: 900px
-            object-position: bottom
-          &:before
-            content: ''
-            background-color: $cSecond
-            position: absolute
-            left: 0
-            right: 5%
-            bottom: -5%
-            top: -5%
-            z-index: -1
-            opacity: .2
-    .col-img-info-p-r
-      .elementor-widget-wrap
-        .img-info-p-r
-          text-align: left
-          &:before
-            left: 5%
-            right: 0
-    .col-content-why
-      padding-left: 3%
-      .elementor-widget-wrap
-        max-height: 450px
-    .col-content-p
-      @include FlexCenter
-      .elementor-widget-wrap
-        flex-direction: column
-        flex-wrap: nowrap
-        height: 80%
-        max-width: 95%
-        justify-content: space-evenly
-        .title-content-p
-          @include FlexVerticalCenter
-          width: auto
-          max-width: 850px
-          border-bottom: solid 2px $cPrinc
-          color: $cPrinc
-          font-weight: 600
-          font-size: 23px
-          text-transform: uppercase
-          &:before
-            content: ''
-            display: block
-            flex-shrink: 0
-            background-image: url("../icons/why-swimming.svg")
-            @include BgCenterCover
-            height: 80px
-            width: 80px
-            margin-right: 20px
-          h2
-            line-height: 35px
-        .title-team
-            &:before
-              background-image: url("../icons/team.svg")
-        .txt-content-p
-          color: $cPrinc
-          max-width: 850px
-        .inner-section-c-p
-          .elementor-container
-            margin: 0
-            justify-content: unset
-            .inner-col-c-p
-              width: auto
-              .elementor-widget-wrap
-                height: unset
-                max-width: unset
-              &:first-of-type
-                margin-right: 30px
-        .inner-section-p-b
-          margin-bottom: 20px
-          background-color: rgba(0, 174, 239, 0.15)
-          border-left: solid 4px $cSecond
-          padding: 20px
-          max-width: 850px
-          .inner-col-p-b
-            .elementor-widget-wrap
-              height: auto
-              max-width: unset!important
-              .title-p-b
-                font-weight: 600
-                color: $cSecond
-                font-size: 23px
-              .txt-p-b
-                color: $cGrayP
-    .col-content-team
-      flex-direction: column
-      align-items: end
-      padding-right: 3%
-      .elementor-widget-wrap
-        max-height: 600px
-        width: auto
-
-
-.section-bottom
-  margin-top: 150px
-
-.section-spas-info
-  background-color: $cGray2
-  padding: 100px 0
-  .elementor-container
-    max-width: 1500px!important
-    justify-content: center
-    .col-img-spas
-      width: 45%
-      margin-right: 30px
+            width: 100%
+            height: 100%
+    .col-i-content
       .elementor-widget-wrap
         align-content: center
-        .img-spas
-          text-align: center
-          img
-    .col-info-spas
-      width: 45%
-      .elementor-widget-wrap
-        align-content: center
-        .title-content-info
-          text-align: center
-        .icon-aq
-          margin-top: 20px
-          max-width: 850px
-        .txt-spas
-          text-align: left
-          max-width: 850px
+        .txt-i-content
           color: $cGrayP
-          margin-top: 30px
-          color: $cPrinc
-        .btn-spas
-          margin: unset
-          max-width: 250px
+        .title-i-content
+          display: flex
+          align-items: center
+          h3
+            //line-height: 75px
+          &:before
+            content: ''
+            background-image: url("../icons/icon-before-title.svg")
+            @include BgCenterContain
+            display: inline-block
+            width: 75px
+            height: 75px
+            margin-right: 20px
+
+.section-i
+  padding-top: 70px
+  padding-bottom: 70px
+.section-i-s
+  padding-bottom: 70px
+  .elementor-container
+    .col-i-content
+      .title-i-content
+        h2
+        &:before
+          background-image: url("../icons/icon-before-title-2.svg")
+
+
+.section-a
+  background-image: url("../img/bg-section-a.png")
+  @include BgCenterCover
+  color: $cWhite
+  padding: 60px 0
+  .col-a-content
+    text-align: center
+    .title-a-content
+    .txt-a-content
+      margin: 30px 0 50px 0
+
+
+.section-i-s
+  padding: 70px 0
+  .col-i-s-img
+
+    .elementor-widget-wrap
+      flex-direction: row
+      .inner-section-i-s-one-img, .inner-section-i-s-two-img
+        .elementor-widget-wrap
+          padding: 3px
+      .inner-section-i-s-one-img
+        width: 70%
+        height: 100%
+        .elementor-container
+          height: 100%
+          .inner-col-i-s-one-img
+            .img-i-s
+              height: 100%
+              .elementor-widget-container
+                height: 100%
+                img
+                  object-fit: cover
+                  height: 100%
+      .inner-section-i-s-two-img
+        width: 30%
+        .elementor-container
+          flex-direction: column
+        .inner-col-i-s-two-img
+          width: 100%
+          .elementor-container
+            .img-i-s
+  .col-i-s-content
+    margin: 25px
+    .elementor-widget-wrap
+      align-content: center
+      .title-secondary
+      .txt-i-s-content
+        color: $cGrayP
+
+
+.section-title-skills
+  padding: 70px 0
+
+.section-title-p
+  margin-bottom: 70px
+
+
 
 .section-skills
   background-image: url("../img/illustration-projet-piscine.png")
@@ -287,6 +252,150 @@
       .img-cert
         width: 150px
 
+
+
+@media (max-width: 1280px)
+  .section-title-primary, .section-title-skills
+    padding: 40px 0
+  .section-i, .section-i-s
+    .elementor-container
+      .col-i-content
+        .elementor-widget-wrap
+          .title-i-content::before
+            width: 50px
+            height: 50px
+            margin-right: 10px
+
+@media (max-width: 1200px)
+  .section-i, .section-i-s
+    padding: 30px 0
+    .elementor-container
+      flex-wrap: nowrap
+      .col-i-content
+        width: 50%
+      .col-i-img
+        width: 50%
+        .img-i:before
+          left: -10px
+          top: -10px
+  .section-i
+    .elementor-container
+      .col-i-img
+        margin: 0 0 0 25px
+  .section-i-s
+    .elementor-container
+      .col-i-img
+        margin: 0 25px 0 0
+      .col-i-s-img
+        width: 60%
+      .col-i-s-content
+        width: 40%
+  .section-skills
+    .elementor-container
+      .col-nb-project, .col-nb-year
+        .nb-project, .nb-year
+          font-size: 60px
+
+@media (max-width: 1123px)
+  .section-i-s
+    .elementor-container
+      .col-i-s-img
+        width: 50%
+        margin-left: 25px
+        .elementor-widget-wrap
+          .inner-section-i-s-one-img
+            width: 100%
+          .inner-section-i-s-two-img
+            display: none
+      .col-i-s-content
+        width: 50%
+
+@media (max-width: 1025px)
+  .section-i, .section-i-s
+    .elementor-container
+      .col-i-content
+        width: 60%
+      .col-i-img
+        width: 40%
+        .elementor-widget-wrap
+          align-content: center
+
+@media (max-width: 863px)
+  .section-i, .section-i-s
+    .elementor-container
+      flex-wrap: wrap
+      .col-i-img, .col-i-content, .col-i-s-img, .col-i-s-content
+        width: 80%
+        margin: auto
+      .col-i-content, .col-i-s-content
+        padding: 30px 0
+        .title-i-content, .title-i-s-content
+          justify-content: center
+          margin-bottom: 30px
+          text-align: center
+          &:before
+            display: none!important
+        .txt-i-content, .txt-i-s-content
+          text-align: center
+        .btn-more-info
+          margin: auto
+  .section-i-s
+    .elementor-container
+      flex-direction: column-reverse
+
+@media (max-width: 768px)
+  .section-first-title-home
+    display: none
+  .section-container-swiper
+    .elementor-container
+      .col-container-swiper
+        .the-swiper
+          .container-swiper
+            flex-direction: column-reverse
+            margin-bottom: 70px
+            .swiper
+              width: 100%!important
+              .swiper-slide
+                margin-right: 0px!important
+            .bloc-info
+              width: 100%
+              margin-right: 0px
+              height: 150px
+  .section-cert
+    .elementor-container
+      flex-wrap: nowrap
+      .col-cert
+        .elementor-widget-wrap
+          .img-cert
+            width: 100px
+
+@media (max-width: 600px)
+  .section-container-swiper
+    .elementor-container
+      .col-container-swiper
+        .the-swiper
+          .container-swiper
+            .bloc-info
+              .txt-bloc-info
+                font-size: 23px
+                text-align: center
+
+@media (max-width: 580px)
+  .section-i, .section-i-s
+    .elementor-container
+      .col-i-img, .col-i-content, .col-i-s-img, .col-i-s-content
+        width: 95%
+  .section-skills
+    height: 450px
+    .elementor-container
+      .col-nb-project, .col-nb-year
+        .nb-year, .nb-project
+          font-size: 45px
+        .txt-nb-project, .txt-nb-year
+          font-size: 30px
+
+
+//--
 @media (max-width: 1645px)
   .section-info-p .elementor-container .col-content-p .elementor-widget-wrap .title-content-p
     font-size: 20px

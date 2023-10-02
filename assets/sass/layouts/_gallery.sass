@@ -26,11 +26,11 @@
   display: none
 
 .section-gallery
-  height: 500px
   background-color: $cGray2
+  padding: 0 25px
   .elementor-container
-    max-width: 90vw!important
-    height: 100%
+    @include WidthContainer
+    height: 700px
     .col-gallery
       .elementor-widget-wrap
         padding: 5px
@@ -44,6 +44,7 @@
               transform: scale(1.05)
             img
               height: 100%
+              width: 100%
               object-fit: cover
               transition: $DurationTransition
         .img-hover
@@ -59,7 +60,20 @@
             @include AbsoluteCover
             cursor: pointer
 
-
+@media (max-width: 1200px)
+  .section-gallery
+    .elementor-container
+      height: unset
+      .col-gallery
+        .elementor-widget-wrap
+          .img-gallery
+            height: 350px
+            .hover-scale
+              transition: unset
+              transform: unset
+          .img-hover
+            &:before
+              display: none
 
 
 
@@ -84,7 +98,7 @@
 
 
 .section-bottom-gallery
-  padding-bottom: 100px
+  padding-bottom: 150px
   .col-gallery:first-of-type
     //height: 80%
     //transform: translateY(25%)

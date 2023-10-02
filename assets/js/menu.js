@@ -12,8 +12,18 @@ siteCache.classList.add('site-cache')
 siteCache.setAttribute('id', 'site-cache')
 siteContent[0].insertAdjacentElement("afterend", siteCache)
 
-console.log(withSidebar)
 siteCache.addEventListener('click', (e) =>{
     withSidebar[0].classList.toggle('with-sidebar')
 } )
+
+let menuItemAccessoires = document.getElementById('menu-item-711')
+let menuItemContact = document.getElementById('menu-item-724')
+
+menuItemAccessoires.addEventListener('click', (e) =>{
+    withSidebar[0].classList.toggle('with-sidebar')
+})
+
+menuItemContact.addEventListener('click', (e) =>{
+    withSidebar[0].classList.toggle('with-sidebar')
+})
 
