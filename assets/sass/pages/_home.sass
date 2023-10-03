@@ -95,6 +95,9 @@
 .section-i
   padding-top: 70px
   padding-bottom: 70px
+
+.section-i-n-p
+  padding-top: 0px
 .section-i-s
   padding-bottom: 70px
   .elementor-container
@@ -190,8 +193,10 @@
 
 .section-container-swiper
   .elementor-container
-    max-width: 100%!important
+    @include WidthContainer
     .col-container-swiper
+      width: 90%
+      margin: auto
       .the-swiper
         .container-swiper
           position: relative
@@ -199,8 +204,8 @@
           margin-bottom: 150px
           justify-content: center
           .bloc-info
-            height: 500px
-            width: 300px
+            height: 525px
+            width: 400px
             background-color: $cPrinc
             margin-right: 15px
             padding: 20px
@@ -217,21 +222,29 @@
               background-color: $cSecond
           .swiper
             display: block
-            position: unset
             width: 70vw!important
             margin: 0
+            position: unset
             .swiper-button-prev, .swiper-button-next
               @include ArrowSwiper
               transform: translateY(-25%)
               &:after
                 content: ''
+            .swiper-scrollbar
+              margin-top: 15px
+              height: 10px
+              position: relative
+              width: 100%
+              left: unset
+              .swiper-pagination-progressbar-fill
+                background: $cSecond
             .swiper-button-prev
-              left: 0
-              display: none
+              left: -100px
+              //display: none
               background-image: url("../icons/previous.svg")
             .swiper-button-next
-              right: 0
-              display: none
+              right: -100px
+              //display: none
               background-image: url("../icons/next.svg")
             .swiper-slide
               height: 500px
@@ -252,6 +265,28 @@
       .img-cert
         width: 150px
 
+
+
+@media (max-width: 1450px)
+  .section-container-swiper .elementor-container .col-container-swiper
+    width: 85%
+
+@media (max-width: 1350px)
+  .section-container-swiper
+    .elementor-container
+      .col-container-swiper
+        .the-swiper
+          .container-swiper
+            flex-direction: column-reverse
+            margin-bottom: 70px
+            .swiper
+              width: 100%!important
+              .swiper-slide
+                margin-right: 0px!important
+            .bloc-info
+              width: 100%
+              margin-right: 0px
+              height: 150px
 
 
 @media (max-width: 1280px)
@@ -310,6 +345,10 @@
       .col-i-s-content
         width: 50%
 
+@media (max-width: 1050px)
+  .section-container-swiper .elementor-container .col-container-swiper
+    width: 80%
+
 @media (max-width: 1025px)
   .section-i, .section-i-s
     .elementor-container
@@ -346,21 +385,6 @@
 @media (max-width: 768px)
   .section-first-title-home
     display: none
-  .section-container-swiper
-    .elementor-container
-      .col-container-swiper
-        .the-swiper
-          .container-swiper
-            flex-direction: column-reverse
-            margin-bottom: 70px
-            .swiper
-              width: 100%!important
-              .swiper-slide
-                margin-right: 0px!important
-            .bloc-info
-              width: 100%
-              margin-right: 0px
-              height: 150px
   .section-cert
     .elementor-container
       flex-wrap: nowrap
@@ -368,6 +392,8 @@
         .elementor-widget-wrap
           .img-cert
             width: 100px
+  .section-container-swiper .elementor-container .col-container-swiper
+    width: 70%
 
 @media (max-width: 600px)
   .section-container-swiper
@@ -379,6 +405,15 @@
               .txt-bloc-info
                 font-size: 23px
                 text-align: center
+            .swiper
+              .swiper-button-prev, .swiper-button-next
+                width: 30px
+                height: 30px
+                background-size: contain
+              .swiper-button-prev
+                left: -55px
+              .swiper-button-next
+                right: -55px
 
 @media (max-width: 580px)
   .section-i, .section-i-s
@@ -394,8 +429,22 @@
         .txt-nb-project, .txt-nb-year
           font-size: 30px
 
-
+@media (max-width: 490px)
+  .section-container-swiper
+    .elementor-container
+      .col-container-swiper
+        .the-swiper
+          .container-swiper
+            .swiper
+              .swiper-button-prev
+                left: -40px
+              .swiper-button-next
+                right: -40px
 //--
+
+
+
+
 @media (max-width: 1645px)
   .section-info-p .elementor-container .col-content-p .elementor-widget-wrap .title-content-p
     font-size: 20px

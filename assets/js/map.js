@@ -3,6 +3,9 @@ let mapOptions = {
     zoom: 25
 }
 
+
+
+
 let map = new L.map('maCarte', mapOptions)
 
 let layer = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
