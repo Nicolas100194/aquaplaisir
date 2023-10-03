@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function translateNext(){
         let translateCurrent = containerSteps[0].style.transform
         let value = 0
-        let valueTransform = 125
+        let valueTransform = 186
         if (translateCurrent.length === 0 ){
-            containerSteps[0].style.transform = "translateY(-125px)"
+            containerSteps[0].style.transform = "translateY(-186px)"
         }
         if(translateCurrent.length == 18 ){
             value = parseInt(translateCurrent.substring(12,15), 10)
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function translatePrev(){
         let translateCurrent = containerSteps[0].style.transform
-        let valueTransform = 125
+        let valueTransform = 186
         let value
         value = parseInt(translateCurrent.substring(12,15), 10)
         value = value - valueTransform

@@ -1,28 +1,57 @@
-.title-content-info
-  @include TitleH3
-  margin-bottom: 0px!important
 
-.title-swip
-  font-weight: 600
-  font-size: 50px
+.title-primary
+  font-size: 30px
   color: $cPrinc
+  text-align: center
+  font-weight: 400
+  h2
+    line-height: 55px
 
-.title-swim
-  color: $cPrinc!important
+@media (max-width: 1280px)
+  .title-primary
+    font-size: 25px
 
-.title-h3-primary
-  color: $cPrinc
-  font-size: 45px
-  h3
-    line-height: 60px
-    .part-bold
-      font-weight: 600
+@media (max-width: 930px)
+  .title-primary
+    font-size: 20px
+    h2
+      line-height: 35px
 
-.title-h3-primary-step
+.title-primary-b
   color: $cWhite
-  font-size: 45px
+
+.title-secondary
+  font-size: 20px
   font-weight: 600
-  background-color: $cPrinc
-  z-index: 99
-  margin-bottom: 50px!important
-  padding-left: 50px
+  text-transform: uppercase
+  color: $cPrinc
+
+.title-secondary-white
+  color: $cWhite
+  font-size: 30px
+
+.title-g-spa
+  color: $cWhite
+  font-size: 30px
+  font-weight: 600
+  margin: 60px 0 60px 20px
+  text-align: center
+
+@media (max-width: 1280px)
+  .title-secondary
+    font-size: 18px
+
+@media (max-width: 863px)
+  .title-secondary, .title-secondary-white, .title-g-spa
+    font-size: 20px
+  .title-g-spa
+    margin: 0px
+
+.title-h4-popup
+  margin-bottom: 30px!important
+  color: $cPrinc
+  font-size: 25px
+
+@media (max-width: 1100px)
+  .title-h4-popup
+    text-align: center

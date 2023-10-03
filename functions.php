@@ -21,7 +21,7 @@ function theme_AquaPlaisir_register_assets(){
     wp_enqueue_script('swiperjs-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js');
     wp_enqueue_script('scroll-step', get_stylesheet_directory_uri().'/assets/js/scroll-step.js', array(), null, true);
     wp_enqueue_script('lightbox', get_stylesheet_directory_uri().'/assets/js/lightbox.js', array(), null, true);
-    //wp_enqueue_script('map', get_stylesheet_directory_uri().'/assets/js/map.js', array(), null, true);
+    wp_enqueue_script('map', get_stylesheet_directory_uri().'/assets/js/map.js', array(), null, true);
     wp_enqueue_script('menu', get_stylesheet_directory_uri().'/assets/js/menu.js', array(), null, true);
 }
 
@@ -263,9 +263,8 @@ HTML;
         echo "<div class=\"swiper-slide\"><img class=\"img-chantier\" src= \" " . $tabThumbnails[$index] . "\"></div>";
     }
     echo <<<HTML
-    
             </div>
-            
+            <div class="swiper-scrollbar"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>

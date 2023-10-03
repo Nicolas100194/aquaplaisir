@@ -2,11 +2,13 @@
     $('document').ready(function(){
         const swiper = new Swiper('.swiper', {
             loop: true,
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30,
             // If we need pagination
             pagination: {
-                el: '.swiper-pagination',
+                el: '.swiper-scrollbar',
+                type: 'progressbar'
+
             },
 
             // Navigation arrows

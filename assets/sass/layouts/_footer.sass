@@ -2,6 +2,8 @@ footer
   padding-top: 60px
   background-color: $cPrinc
   color: $cWhite
+  position: relative
+  z-index: 9999
   .section-footer
     .elementor-container
       @include WidthContainer
@@ -31,3 +33,26 @@ footer
                 width: 100%
                 height: 100%
                 margin: 0
+
+@media (max-width: 880px)
+  footer
+    .section-footer
+      .elementor-container
+        flex-direction: column
+        .col-info-footer, .col-rs-footer
+          width: 90%
+          margin: auto
+          text-align: center
+          .title-h3-f
+            font-size: 25px
+          .subtitle-info-f
+            font-size: 23px
+
+@media (max-width: 500px)
+  footer
+    .section-footer
+      .elementor-container
+        .col-info-footer
+          .list-schedule
+            ul > li
+              font-size: 16px
