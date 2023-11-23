@@ -3,16 +3,13 @@ let mapOptions = {
     zoom: 25
 }
 
-
-
-
 let map = new L.map('maCarte', mapOptions)
 
 let layer = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 map.addLayer(layer);
 
 let customIcon = {
-    iconUrl: "/aqua-plaisir/wp-content/themes/aquaplaisir/assets/icons/location-blue.svg",
+    iconUrl: "../wp-content/themes/aquaplaisir/assets/icons/location-blue.svg",
     iconSize:[80,80]
 }
 

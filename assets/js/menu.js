@@ -27,3 +27,4 @@ menuItemContact.addEventListener('click', (e) =>{
     withSidebar[0].classList.toggle('with-sidebar')
 })
 
+//--- anim menu scroll

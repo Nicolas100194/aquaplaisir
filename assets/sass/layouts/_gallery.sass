@@ -25,15 +25,17 @@
 .section-lightbox-disabled
   display: none
 
+
+
 .section-gallery
   background-color: $cGray2
-  padding: 0 25px
+  padding: 0px 5px 5px 5px
   .elementor-container
-    @include WidthContainer
-    height: 700px
+    max-width: 100vw!important
+    height: 550px
     .col-gallery
       .elementor-widget-wrap
-        padding: 5px
+        padding: 0px
         .img-gallery
           height: 100%
           .elementor-widget-container
@@ -59,6 +61,17 @@
             background-position: center
             @include AbsoluteCover
             cursor: pointer
+      &:nth-of-type(2)
+        padding: 0px 5px
+
+@media (max-width: 768px)
+  .section-gallery
+    .elementor-container
+      flex-direction: column
+      .col-gallery
+        width: 100%
+
+
 
 @media (max-width: 1200px)
   .section-gallery
@@ -75,36 +88,13 @@
             &:before
               display: none
 
+@media (max-width: 768px)
+  .section-gallery
+    padding: 0px 5px
+    .elementor-container
+      .col-gallery
+        padding: 0px 0px 5px 0px
+        &:nth-of-type(2)
+          padding: 0px 0px 5px 0px
 
-
-.section-top-gallery
-  .col-gallery:first-of-type
-    //height: 80%
-  .col-gallery:nth-of-type(2)
-    //height: 120%
-  .col-gallery:nth-of-type(3)
-    //height: 80%
-
-.section-md-gallery
-  .col-gallery:first-of-type
-    //height: 140%
-    //transform: translateY(-14%)
-  .col-gallery:nth-of-type(2)
-    //height: 120%
-    //transform: translateY(25%)
-  .col-gallery:nth-of-type(3)
-    //height: 140%
-    //transform: translateY(-14%)
-
-
-.section-bottom-gallery
-  padding-bottom: 150px
-  .col-gallery:first-of-type
-    //height: 80%
-    //transform: translateY(25%)
-  .col-gallery:nth-of-type(2)
-    //height: 100%
-  .col-gallery:nth-of-type(3)
-    //height: 80%
-    //transform: translateY(25%)
 

@@ -2,17 +2,52 @@
 @import "../../../../aquaplaisir/assets/sass/utils/variables"
 
 
-.btn-devis
-  background-color: $cWhite
-  border-radius: $RadiusBtn
+.button-form-princ
   width: auto!important
   margin: auto
+  border: solid 1px
+  border-radius: $RadiusBtn
+  font-size: 16px
+  .elementor-button-wrapper
+    a
+      font-size: 16px
+      padding: 18px 35px
+      font-weight: 600
+  &:hover
+    transition: $DurationTransition
+
+
+.btn-s-h
+  border-color: $cWhite
+  backdrop-filter: blur(5px)
+  &:hover
+    border-color: $cPrinc
+    background-color: $cPrinc
+  .elementor-button:visited
+    color: $cWhite
+
+
+.btn-more-info
+  border-color: $cPrinc
+  margin: unset
+  .elementor-button-wrapper
+    a
+      color: $cPrinc
+  &:hover
+    background-color: $cPrinc
+    .elementor-button-wrapper
+      a
+        color: $cWhite
+
+
+.btn-devis
+  background-color: $cWhite
+  border-radius: 50px
+  .elementor-button:visited
+    color: $cPrinc
   a
     color: $cPrinc
-    padding: 10px 15px
     @include FlexVerticalCenter
-    &:hover
-      color: $cPrinc
     &:before
       content: ''
       display: inline-block
@@ -21,14 +56,60 @@
       margin: 0 10px 0 0
       @include BgCenterContain
       background-image: url("../icons/icon-devis.svg")
+  &:hover
+    .elementor-button-wrapper
+      a
+        color: $cPrinc
 
 .btn-h-apt
-  border: solid 1px $cWhite
-  width: auto!important
-  &:hover
-    background-color: $cWhite
+  background-color: $cWhite
+  border-color: $cWhite
+  .elementor-button-wrapper
     a
       color: $cPrinc
+
+
+.btn-category
+  background-color: $cPrinc
+  .elementor-widget-container
+    .elementor-button-wrapper
+      a
+        color: $cWhite
+        text-align: center
+        width: 100%
+        padding: 30px 0px
+        font-weight: 600
+        font-size: 16px
+        line-height: 1.5rem
+
+
+  &:hover
+    background-color: $cSecond
+    transition: $DurationTransition
+
+@media (max-width: 1100px)
+  .btn-category
+    //min-height: 120px
+    .elementor-widget-container
+      //height: 100%
+      .elementor-button-wrapper
+        //height: 100%
+        a
+          //padding: 20px
+          //height: 100%
+          .elementor-button-content-wrapper
+            height: 100%
+            .elementor-button-text
+              display: flex
+              justify-content: center
+              align-items: center
+              height: 100%
+
+
+//--------------------------------------------------------------
+
+
+
 
 
 .btn-b-large
@@ -78,7 +159,7 @@
   a:hover
     color: $cPrinc
 
-.btn-more-info, .btn-get-devis
+.btn-get-devis
   border-radius: $RadiusBtn
   width: auto!important
   a
@@ -94,15 +175,15 @@
       @include BgCenterContain
   &:hover
     transition: $DurationTransition
-    transform: translate(10px, 10px)
+    //transform: translate(10px, 10px)
 
-.btn-more-info
+//.btn-more-info
   background-color: $cSecond
-  box-shadow: 10px 10px 0px $ShadowBtnInfo
+  //box-shadow: 10px 10px 0px $ShadowBtnInfo
   a:before
     background-image: url("../icons/arrow-btn-more-info.svg")
   &:hover
-    box-shadow: 0px 0px 0px $ShadowBtnInfo
+    //box-shadow: 0px 0px 0px $ShadowBtnInfo
 
 .btn-get-devis
   border: solid 3px $cPrinc
@@ -125,17 +206,7 @@
 
 //a verifier
 
-.btn-s-h
-  width: auto!important
-  margin: auto!important
-  .elementor-button-wrapper
-    a
-      color: $cPrinc
-      font-weight: bold
-      background-color: $cWhite
-      &:hover
-        background-color: $cPrinc
-        color: $cWhite
+
 
 .btn-content-info
   a
