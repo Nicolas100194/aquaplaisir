@@ -18,6 +18,7 @@ function theme_AquaPlaisir_register_assets(){
     wp_enqueue_style('lefleat', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
     wp_enqueue_script('lefleat-js', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js', array(), null, true);
     wp_enqueue_script('swiper', get_stylesheet_directory_uri().'/assets/js/swiper.js', array(), null, true);
+    wp_enqueue_script('scroll', get_stylesheet_directory_uri().'/assets/js/scroll.js', array(), null, true);
     wp_enqueue_script('swiperjs-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js');
     wp_enqueue_script('scroll-step', get_stylesheet_directory_uri().'/assets/js/scroll-step.js', array(), null, true);
     wp_enqueue_script('lightbox', get_stylesheet_directory_uri().'/assets/js/lightbox.js', array(), null, true);
@@ -156,7 +157,7 @@ function wpcode_elementor_shortcode_etapes(){
         }
     }
     wp_reset_postdata();
-    return $tabThumbnails;
+    return array_reverse($tabThumbnails);
 }
 
 function wpcode_elementor_shortcode(){
@@ -194,7 +195,7 @@ function wpcode_elementor_shortcode_title_step(){
         }
     }
     wp_reset_postdata();
-    return $tabTitle;
+    return array_reverse($tabTitle);
 }
 
 function get_accessoires_shortcode(){
@@ -233,7 +234,7 @@ function get_etapes_shortcode()
             <div class="swiper-wrapper">
 HTML;
     for ($index = 0; $index < $max ; $index++) {
-        echo "<div class=\"swiper-slide\"><img alt =\"" . $tabTitleStep[$index] . "\" class=\"img-chantier\" src= \" " . $tabThumbnails[$index] . "\"></div>";
+        echo "<div class=\"swiper-slide\"><h3 class=\"title-swiper-step\">" . $tabTitleStep[$index] . "</h3><img alt =\"" . $tabTitleStep[$index] . "\" class=\"img-chantier\" src= \" " . $tabThumbnails[$index] . "\"></div>";
     }
     echo <<<HTML
             </div>

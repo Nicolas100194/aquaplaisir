@@ -19,7 +19,7 @@ header
     .menu-menu-principal-container
       text-transform: uppercase
       font-weight: 500
-      font-size: 20px
+      font-size: 16px
       @include FlexVerticalCenter
       ul
         display: flex
@@ -105,18 +105,18 @@ header
     right: 0
     bottom: 0
     top: 0
-    width: 400px
-    transform: translateX(400px)
+    width: 100vw
+    transform: translateX(100vw)
     transition: $DurationTransition
     background-color: $cPrinc
     height: 1500px //fix !!
     ul
-      padding: 20px
+      padding-left: 20px
       li
         height: 100px
         a
           color: $cWhite
-          width: 90%
+          width: calc(100vw - 40px)
           font-size: 19px
           font-weight: 500
           text-transform: uppercase
@@ -134,7 +134,7 @@ header
         content: ''
         display: block
         height: 1px
-        width: 90%
+        width: calc(100vw - 40px)
         background-color: $cGray
 
 
@@ -151,43 +151,43 @@ header
         width: 400px
     .container-menus
       .menu-menu-principal-container
-        font-size: 17px
+
         ul
           .menu-item
             padding: 0 30px
 
 @media (max-width: 1520px)
   header
+    height: 115px
+    transition: $DurationTransition
     .logo-header-desktop
       img
-        width: 350px
+        width: 315px
     .container-menus
+      .menu-menu-secondaire-container
+        ul
+          width: 130px
+          height: 100%
       .menu-menu-principal-container
         ul
           .menu-item
             a::before
-              margin-right: 15px
+              width: 35px
+              height: 35px
+  .site-content
+    padding-top: 100px
 
-@media (max-width: 1434px)
+
+@media (max-width: 1270px)
   header
     .container-menus
       .menu-menu-principal-container
         ul
           .menu-item
-            padding: 0 30px
-            a
-              flex-direction: column
-              &:before
-                margin: 0 0 15px 0
-
-
-
-@media (max-width: 1280px)
-  header
-    .container-menus
-      .menu-menu-secondaire-container
-        ul
-          width: 150px
+            transition: $DurationTransition
+            padding: 0 20px
+            a::before
+              margin-right: 15px
 
 @media (max-width: 1200px)
   header
@@ -210,26 +210,24 @@ header
           width: 70px
           height: auto
 
-
-@media (max-width: 650px)
+@media (max-width: 863px)
   header
+    height: 100px
     .logo-header-desktop
       img
-        width: 280px
-    .container-logo-mobile
-      width: 120px
-
-@media (max-width: 460px)
-  .with-sidebar .site-container .site-pusher
-    transform: translateX(-350px)
-  header
+         width: 250px
     .container-logo-mobile
       .logo-menu-mobile
         .menu-mobile
-          width: 60px
+          width: 50px
+          right: 0
+          left: unset
+
+
+
+@media (max-width: 460px)
+  header
     .menu-menu-mobile-container
-      width: 350px
-      transform: translateX(350px)
       ul
         li
           a
@@ -239,6 +237,10 @@ header
 @media (max-width: 420px)
   header
     padding-left: 10px
+    .container-logo-mobile
+      .logo-menu-mobile
+        .menu-mobile
+          width: 40px
     .logo-header-desktop
       img
-        width: 230px
+        width: 200px

@@ -6,28 +6,30 @@ footer
   z-index: 9999
   .section-footer
     .elementor-container
-      @include WidthContainer
-      .title-h3-f
-        font-size: 36px
-        font-weight: 700
-        text-transform: uppercase
-        margin-bottom: 50px
+      .link-footer
+        color: $cWhite
+        a
+          color: $cWhite
+      .col-title
+        .elementor-widget-wrap
+          justify-content: center
+
+      .col-gamme
+        li
+          margin-bottom: 20px
       .col-info-footer
-        .subtitle-info-f
-          font-size: 25px
-          font-weight: 600
-          text-transform: uppercase
-        .list-schedule
-          ul > li
-            margin-bottom: 20px
-            font-size: 20px
+        .elementor-widget-wrap
+          .list-schedule
+            ul > li
+              margin-bottom: 20px
+              font-size: 16px
       .col-rs-footer
         .list-rs
           ul > li
             margin-bottom: 20px
             .elementor-icon-list-icon
-              height: 50px
-              width: 50px
+              height: 30px
+              width: 30px
               margin-right: 18px
               svg
                 width: 100%
@@ -43,10 +45,10 @@ footer
           width: 90%
           margin: auto
           text-align: center
-          .title-h3-f
-            font-size: 25px
-          .subtitle-info-f
-            font-size: 23px
+          .list-rs
+            .elementor-icon-list-text
+              text-align: left
+
 
 @media (max-width: 500px)
   footer

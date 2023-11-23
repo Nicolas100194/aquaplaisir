@@ -44,13 +44,17 @@
 
 
 .section-title-primary
-  padding: 70px 0px
+  padding: 50px 0px
+  .col-title-primary
+    width: 100%
 
 .section-i, .section-i-s
   .elementor-container
     @include WidthContainer
     .col-i-img, .col-i-content
       margin: 25px
+      .elementor-element-addfd7d
+        margin-top: 40px
     .col-i-img
       .img-i
         box-shadow: 0 0 25px $ShadowImgGray
@@ -81,6 +85,7 @@
         .title-i-content
           display: flex
           align-items: center
+          margin-bottom: 20px!important
           h3
             //line-height: 75px
           &:before
@@ -91,6 +96,9 @@
             width: 75px
             height: 75px
             margin-right: 20px
+        .title-team
+          &:before
+            background-image: url("../icons/icon-before-title-team.svg")
 
 .section-i
   padding-top: 70px
@@ -118,10 +126,13 @@
     .title-a-content
     .txt-a-content
       margin: 30px 0 50px 0
+      strong
+        color: $cWhite
 
-
+.section-d-spa
+  padding-top: 100px
 .section-i-s
-  padding: 70px 0
+  padding-bottom: 100px
   .col-i-s-img
 
     .elementor-widget-wrap
@@ -151,16 +162,23 @@
           .elementor-container
             .img-i-s
   .col-i-s-content
-    margin: 25px
+    //margin: 25px
+    padding-left: 25px
     .elementor-widget-wrap
       align-content: center
       .title-secondary
       .txt-i-s-content
         color: $cGrayP
+        padding: 25px 0
+        margin-bottom: 0px
+        //border-left: solid 2px $cSecond
+        //padding-left: 20px
 
 
 .section-title-skills
-  padding: 70px 0
+  padding-bottom: 70px
+  .col-title-skills
+    width: 100%
 
 .section-title-p
   margin-bottom: 70px
@@ -201,11 +219,12 @@
         .container-swiper
           position: relative
           @include FlexVerticalCenter
-          margin-bottom: 150px
+          margin-bottom: 70px
           justify-content: center
           .bloc-info
             height: 525px
-            width: 400px
+            max-width: 300px
+            min-width: 300px
             background-color: $cPrinc
             margin-right: 15px
             padding: 20px
@@ -257,14 +276,23 @@
 .section-cert
   background-color: $cWhite
   .elementor-container
+    justify-content: center
     @include WidthContainer
   .col-cert
+    width: 25%
     .elementor-widget-wrap
       justify-content: center
       align-content: center
       .img-cert
         width: 150px
 
+@media (max-width: 1500px)
+  .section-d-spa
+    .elementor-container
+      margin: 0 25px
+      .col-i-s-img
+        .elementor-container
+          margin: 0px!important
 
 
 @media (max-width: 1450px)
@@ -284,6 +312,8 @@
               .swiper-slide
                 margin-right: 0px!important
             .bloc-info
+              max-width: unset
+              min-width: unset
               width: 100%
               margin-right: 0px
               height: 150px
@@ -300,6 +330,8 @@
             width: 50px
             height: 50px
             margin-right: 10px
+      .col-i-s-content
+        padding-left: 0px
 
 @media (max-width: 1200px)
   .section-i, .section-i-s
@@ -330,13 +362,14 @@
       .col-nb-project, .col-nb-year
         .nb-project, .nb-year
           font-size: 60px
+  .section-d-spa
+    padding-top: 70px
 
 @media (max-width: 1123px)
   .section-i-s
     .elementor-container
       .col-i-s-img
         width: 50%
-        margin-left: 25px
         .elementor-widget-wrap
           .inner-section-i-s-one-img
             width: 100%
@@ -381,6 +414,14 @@
   .section-i-s
     .elementor-container
       flex-direction: column-reverse
+  .section-d-spa
+    padding-top: 30px
+    .elementor-container
+      .col-i-s-img, .col-i-s-content
+        width: 100%
+        .elementor-widget-wrap
+          padding: 0px
+
 
 @media (max-width: 768px)
   .section-first-title-home
@@ -392,8 +433,23 @@
         .elementor-widget-wrap
           .img-cert
             width: 100px
-  .section-container-swiper .elementor-container .col-container-swiper
-    width: 70%
+  .section-title-p
+    margin-bottom: 25px
+  .section-container-swiper
+    .elementor-container
+      .col-container-swiper
+        width: 95%
+        .the-swiper
+          .container-swiper
+            margin-bottom: 25px
+            .swiper
+              .swiper-button-next, .swiper-button-prev
+                transform: translateY(86%)
+              .swiper-button-prev
+                left: 0px
+              .swiper-button-next
+                right: 0px
+
 
 @media (max-width: 600px)
   .section-container-swiper
@@ -406,13 +462,13 @@
                 font-size: 23px
                 text-align: center
             .swiper
-              .swiper-button-prev, .swiper-button-next
+              //.swiper-button-prev, .swiper-button-next
                 width: 30px
                 height: 30px
                 background-size: contain
-              .swiper-button-prev
+              //.swiper-button-prev
                 left: -55px
-              .swiper-button-next
+              //.swiper-button-next
                 right: -55px
 
 @media (max-width: 580px)
@@ -428,6 +484,16 @@
           font-size: 45px
         .txt-nb-project, .txt-nb-year
           font-size: 30px
+  .section-d-spa
+    .elementor-container
+      .col-i-s-content, .col-i-s-img
+        width: 100%
+  .section-cert
+    .elementor-container
+      flex-direction: column
+      .col-cert
+        width: 100%
+
 
 @media (max-width: 490px)
   .section-container-swiper
@@ -436,9 +502,9 @@
         .the-swiper
           .container-swiper
             .swiper
-              .swiper-button-prev
+              //.swiper-button-prev
                 left: -40px
-              .swiper-button-next
+              //.swiper-button-next
                 right: -40px
 //--
 

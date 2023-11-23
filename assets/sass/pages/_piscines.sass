@@ -10,7 +10,7 @@
     .col-content-h
       position: unset
       width: 30%
-      background-color: $cSecond
+      background-color: $cPrinc
       padding: 0 30px
       .elementor-widget-wrap
         padding: 0px
@@ -52,36 +52,39 @@
           object-position: 50% 78%
 
 
+.section-btn-category
+  padding: 30px 0 100px 0
+  .elementor-container
+    .col-btn-category
+      .elementor-widget-wrap
+        padding: 0px 3px
+
 
 .elementor-element-e25f5e9
   .elementor-widget-wrap
     align-content: center
 
 
-.section-title-gallery
-  margin-top: 70px
-  background-color: $cGray2
-  padding: 50px 0 50px 40px
+
 
 .section-p-b
   background-color: $cGray2
-  padding-bottom: 20px
   .elementor-container
     @include WidthContainer
     .col-p-b
       .elementor-widget-wrap
-        padding: 0 5px
+        justify-content: center
+        padding: 0px
         .txt-p-b
-          border-left: solid 3px $cPrinc
-          padding-left: 20px
+          text-align: center
           max-width: 800px
           color: $cGrayP
+          margin-bottom: 50px
           span
             color: $cPrinc
 
 .section-blue
   background-color: $cPrinc
-  padding: 40px 0
 
 .section-txt-blue
   text-align: center
@@ -92,78 +95,43 @@
       color: $cSecond
 
 
-
-
-.section-step
-  padding: 70px 0 110px 0
-  background-color: $cPrinc
+.section-step-swiper
+  padding: 0px 100px 50px 100px
   .elementor-container
-    max-width: 1700px!important
-    padding: 0px 30px
-    .col-step
-      width: 50%
-      max-height: 800px
+  .col-step-swiper
+    .the-swiper-step
       overflow: hidden
-      background-color: $cPrinc
-      padding-top: 50px
-      .elementor-widget-wrap
-        overflow: hidden
-        padding: 0
-        transition: .5s
-        .elementor-inner-section
-          overflow: hidden
-          height: 558px
-          .elementor-container
-            padding: 0px
-            .elementor-inner-column
-              transition: $DurationTransition
-              .the-step
-                color: $cWhite
-                padding: 50px 20px
-                font-weight: 600
-                font-size: 27px
-                width: 95%
-                border-left: solid 5px $cSecond
-              .the-step-active
-                font-size: 35px
-                animation: borderAnim forwards 0.5s
-              @keyframes borderAnim
-                0%
+      position: unset
+      .swiper-wrapper
+        text-align: center
+        height: 600px
+        .swiper-slide
+          img
+            height: 100%
+            width: 100%
+            object-fit: cover
+      .swiper-button-prev, .swiper-button-next
+        @include ArrowSwiper
+        transform: translateY(-25%)
+        &:after
+          content: ''
+      h3
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 35px
+        background-color: $cSecond
+        padding: 10px
+        width: 101%
 
-                  border-left: solid 0px $cSecond
-                100%
-                  border-left: solid 50px $cSecond
-              .the-step-second
-                opacity: .4
-              .the-step-third
-                opacity: .1
-    .col-swiper-step
-      width: 50%
-      background-color: $cPrinc
-      .elementor-widget-wrap
-        padding: 0
-        justify-content: center
-        align-content: center
-      .container-swiper-step
+      .swiper-button-prev
+        left: -100px
+        background-image: url("../icons/previous.svg")
+      .swiper-button-next
+        right: -100px
+        background-image: url("../icons/next.svg")
 
-        overflow: hidden
-        max-height: 800px
-        .swiper-step
-          display: block
-          position: unset
-          .swiper-slide
-          .swiper-button-prev, .swiper-button-next
-            transform: translateY(-15%)
-            @include ArrowSwiper
-            &:after
-              content: ''
-          .swiper-button-next
-            @include ArrowNext
 
-          .swiper-button-prev
-            @include ArrowPrev
-            &:after
-              display: none
 
 
 
@@ -190,18 +158,21 @@
           @include FlexCenter
           box-shadow: 0 3px 6px $Shadow
         .txt-keyw
-          font-size: 30px
+          font-size: 28px
         .inner-section-keyw
           @include WidthContainer
           margin-top: 25px
           .elementor-container
             background: none
+            justify-content: center
             .inner-col-keyw
+              width: 15%
               .elementor-widget-wrap
                 transform: translateY(0)
                 .inner-txt
                   font-weight: 600
-                  font-size: 30px
+                  font-size: 24px
+
 
 .inner-section-i-a
   margin-bottom: 20px
@@ -255,6 +226,13 @@
   .section-md
     margin: 50px 20px
 
+@media (max-width: 1430px)
+  .section-h
+    .elementor-container
+      .col-content-h
+        //padding: 0px
+
+
 @media (max-width: 1280px)
   .section-h
     .elementor-container
@@ -270,10 +248,25 @@
         width: 40%
       .col-img-h
         width: 60%
-  .section-blue
-    padding: 20px 0
+  .section-btn-category
+    padding: 0px 25px 70px 25px
+    .elementor-container
+      width: 100%
+      //padding: 0 25px
   .section-step
     padding: 40px 0
+  .section-entretien-p
+    padding: 100px 0
+    .title-i-a-content
+      text-align: center
+    .txt-i-content
+      text-align: center
+      margin-bottom: 0px
+    .inner-section-i-a
+      width: 60%
+      max-width: 450px
+      min-width: 250px
+      margin: 20px auto
   .inner-section-i-a
     .elementor-container
       flex-direction: column
@@ -282,44 +275,23 @@
       .inner-col-i-a:nth-of-type(2)
         margin: 15px 0
 
-@media (max-width: 1025px)
-  .section-md
-    .elementor-container
-      .col-md-l
-        margin-right: 0px
-        margin-bottom: 50px
-      .col-md-r
-        margin-left: 0px
-      .col-a-sw-md
-        width: 100%
-
-
-@media (max-width: 1000px)
-  .section-step
-    .elementor-container
-      flex-direction: column-reverse
-      align-content: center
-      padding: 0px
-      .col-step, .col-swiper-step
-        width: 80%
-  .section-i
-    .col-i-content
-      .title-i-a-content
-        text-align: center
+@media (max-width: 1134px)
   .section-keyw
     .elementor-container
       .col-keyw
         .elementor-widget-wrap
           .txt-keyw
-            font-size: 25px
+            font-size: 24px
           .inner-section-keyw
             .elementor-container
               .inner-col-keyw
+                width: 20%
                 .elementor-widget-wrap
                   .inner-txt
-                    font-size: 25px
+                    font-size: 20px
 
-@media (max-width: 768px)
+
+@media (max-width: 1050px)
   .section-h
     .elementor-container
       flex-direction: column-reverse
@@ -334,14 +306,113 @@
         .elementor-widget-wrap
           img
             height: 450px
+  .section-entretien-p
+    padding: 50px 0
+    .elementor-container
+      flex-direction: column
+      align-items: center
+      .col-i-img, .col-i-content
+        width: 90%
+        margin: 0
+      .col-i-content
+        padding-top: 50px
+
+@media (max-width: 1025px)
+  .section-md
+    margin: 20px 20px
+    .elementor-container
+      .col-md-l
+        margin-right: 0px
+        margin-bottom: 20px
+      .col-md-r
+        margin-left: 0px
+      .col-a-sw-md
+        width: 100%
 
 
-@media (max-width: 767px)
-  .section-keyw .elementor-container
-    max-height: 445px
+
+
+
+@media (max-width: 1000px)
+  .section-step
+    .elementor-container
+      flex-direction: column-reverse
+      align-content: center
+      padding: 0px
+
+  .section-i
+    .col-i-content
+      .title-i-a-content
+        text-align: center
+
+@media (max-width: 920px)
+  .section-btn-category
+    padding-bottom: 20px
+    padding-top: 0px
+    .elementor-container
+      flex-direction: column
+      width: 60%
+      padding: 0px
+      .col-btn-category
+        width: 100%
+        margin: 10px 0
+
+@media (max-width: 650px)
+  .section-btn-category
+    .elementor-container
+      width: 90%
+
+
+@media (max-width: 768px)
+  .section-step-swiper
+    padding: 20px
+    .col-step-swiper
+      .the-swiper-step
+        .swiper-button-next, .swiper-button-prev
+          transform: translateY(230%)
+        .swiper-button-prev
+          left: 0px
+        .swiper-button-next
+          right: 0px
+
+@media (max-width: 700px)
+  .section-keyw .elementor-container .col-keyw .elementor-widget-wrap .inner-section-keyw .elementor-container .inner-col-keyw
+    width: 25%
+
+@media (max-width: 620px)
+  .section-keyw
+    .elementor-container
+      max-height: 470px
+      .col-keyw
+        .elementor-widget-wrap
+          transform: translateY(-20%)
+          .inner-section-keyw
+            .elementor-container
+              flex-direction: column
+              align-content: center
+              .inner-col-keyw
+                width: 100%
+
+@media (max-width: 600px)
+  .section-a-sw, .section-md
+    .elementor-container
+      .col-a-sw, .col-a-sw-md
+        padding: 30px 10px
+
+  .section-step-swiper .col-step-swiper .the-swiper-step h3
+    font-size: 25px
 
 @media (max-width: 524px)
   .section-keyw .elementor-container
     max-height: 480px
   .section-step .elementor-container .col-step .elementor-widget-wrap .elementor-inner-section .elementor-container .elementor-inner-column .the-step
     font-size: 21px
+
+@media (max-width: 355px)
+  .section-keyw
+    .elementor-container
+      max-height: 500px
+      .col-keyw
+        .elementor-widget-wrap
+          .txt-keyw
+            font-size: 21px

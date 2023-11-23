@@ -3,7 +3,7 @@
 .pum-overlay
   background-color: rgba(133,133,133,0.9)!important
   #popmake-605
-    width: 80%!important
+    width: 90%!important
     top: 30px!important
     max-width: 1500px!important
     background-color: $cWhite!important
@@ -72,6 +72,13 @@
       top: 20px!important
       font-size: 19px!important
 
+@media (max-width: 1200px)
+  .pum-overlay #popmake-605
+    left: unset!important
+    margin: auto
+    width: 95vw!important
+    position: relative
+
 @media (max-width: 1100px)
   .pum-overlay #popmake-605 .pum-content .container-cat-popup
     flex-direction: column
@@ -94,6 +101,16 @@
       margin-top: 5px
       margin-left: 0px
 
+@media (max-width: 390px)
+  .pum-overlay
+    #popmake-605
+      #pum_popup_title_605
+        font-size: 24px
+      .pum-content
+        .container-cat-popup
+          .container-content-popup
+            padding: 0px
+
 
 #pum-627
   overflow-y: unset
@@ -113,16 +130,16 @@
         text-align: center
       h2
         margin-top: 30px
-        font-size: 50px
+        font-size: 30px
       h3
         font-weight: 400
-        font-size: 40px
+        font-size: 27px
       .wpcf7
         margin-top: 50px
         form
           display: inline-block
           width: 100%
-          max-width: 1300px
+          max-width: 1000px
           left: 50%
           position: relative
           transform: translateX(-50%)
@@ -135,7 +152,7 @@
             background-color: unset
             border: solid 3px $cWhite
             border-radius: 8px
-            height: 70px
+            height: 50px
             margin-top: 10px
             padding: 10px
             &:focus
@@ -145,7 +162,7 @@
             color: $cSecond
             margin-top: 10px
           label
-            font-size: 19px
+            font-size: 16px
           textarea
             color: $cWhite
             margin-top: 10px
@@ -154,6 +171,7 @@
             border: solid 3px $cWhite
             background-color: unset
             border-radius: 8px
+            height: 200px
             &:focus
               border: solid 3px $cSecond
               outline: none
@@ -168,12 +186,12 @@
             color: $cWhite
             .wpcf7-submit
               display: block
-              margin: 30px auto
-              width: 300px
+              margin: 30px auto 0px auto
+              width: 250px
               background-color: $cWhite
               color: $cPrinc
               font-weight: 600
-              font-size: 19px
+              font-size: 16px
               height: 50px
               &:hover
                 cursor: pointer
@@ -190,7 +208,7 @@
             font-size: 19px
       .info-input
         width: 100%
-        max-width: 1300px
+        max-width: 1000px
         margin: auto
         color: $cWhite
         span
@@ -219,7 +237,9 @@
 
 @media (max-width: 880px)
   #pum-627
+    overflow-y: scroll
     #popmake-627
+      height: 1200px!important
       .pum-content
         .wpcf7
           form
@@ -231,6 +251,7 @@
             p
               margin: 10px 0
               width: 100%
+
 
 @media (max-width: 550px)
   #pum-627

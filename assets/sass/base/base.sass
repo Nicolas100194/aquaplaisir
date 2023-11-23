@@ -5,12 +5,13 @@ html
 
 
 *
-  font-family: Montserrat
+  font-family: 'Montserrat', sans-serif
   padding: 0
   margin: 0
   text-decoration: none
   list-style: none
   box-sizing: border-box
+  scroll-behavior: smooth
 
 body
   background-color: $cBg
@@ -21,7 +22,7 @@ body
     overflow: hidden
     .site-pusher
       transition: $DurationTransition
-      transform: translateX(-400px)
+      transform: translateX(-100vw)
       .site-cache
         cursor: pointer
         @include AbsoluteCover
@@ -49,6 +50,7 @@ body
   letter-spacing: 0.5px
   line-height: 35px
   font-size: 16px
+  font-weight: 400
   strong
     color: $cPrinc
 @media (max-width: 1280px)
@@ -77,3 +79,16 @@ body
 .section-blue
   background-color: $cPrinc
   color: $cWhite
+
+@media (max-width: 863px)
+  .site-content
+    padding-top: 100px
+
+.separator
+  margin-bottom: 50px
+  .elementor-divider
+    padding: 0px
+    .elementor-divider-separator
+      width: 100px!important
+      margin: auto
+      border-top: solid 1px $cGrayP!important
